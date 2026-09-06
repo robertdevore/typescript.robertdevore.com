@@ -1,0 +1,4 @@
+[
+  { "id": "job_a", "attempts": 2 },
+  { "id": "job_b", "attempts": 0 }
+]

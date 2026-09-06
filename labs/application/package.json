@@ -1,0 +1,16 @@
+{
+  "name": "course-job-application",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "node --enable-source-maps dist/main.js"
+  },
+  "dependencies": {
+    "@typescript-course/job-summary": "file:../package"
+  },
+  "devDependencies": {
+    "typescript": "7.0.2",
+    "@types/node": "24.13.3"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "checkJs": true,
+    "strict": true,
+    "target": "ES2022",
+    "module": "NodeNext",
+    "types": [],
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "outDir": "../../.work/migration",
+    "rootDir": "src"
+  },
+  "include": ["src/**/*.js"]
+}

@@ -1,0 +1,15 @@
+{
+  "runtime": "v24.20.0",
+  "package": "@typescript-course/job-summary",
+  "files": [
+    "LICENSE",
+    "README.md",
+    "dist/index.d.ts",
+    "dist/index.d.ts.map",
+    "dist/index.js",
+    "dist/index.js.map",
+    "package.json"
+  ],
+  "negativeDiagnostic": 2322,
+  "result": "passed"
+}
