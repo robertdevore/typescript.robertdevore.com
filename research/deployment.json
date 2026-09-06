@@ -3,7 +3,7 @@
   "site": "https://typescript.robertdevore.com",
   "repository": "https://github.com/robertdevore/typescript.robertdevore.com",
   "worker": "typescript-course",
-  "version": "8fa81427-ffac-4be5-8aac-5d22b5288ca6",
+  "version": "d25637b1-692e-4f01-9f04-7b638a421222",
   "ci": {
     "run": "https://github.com/robertdevore/typescript.robertdevore.com/actions/runs/34062993335",
     "node": ["24.20.0", "26.x"],
@@ -21,5 +21,12 @@
     "mobileMenu": "320, 390, 760px; full viewport, keyboard loop, Escape, close, navigation, desktop resize, no-JS fallback",
     "tablerRevision": "55f87a73f45cf1d9eaf16d7da705065483a9e4f9",
     "browserJavaScriptBytes": 5747
+  },
+  "seoAudit": {
+    "date": "2026-09-06",
+    "report": "seo-audit/2026-09-06/executive-summary.md",
+    "result": "PASS WITH RECOMMENDATIONS",
+    "verified": "47 canonical pages, 42 live social images, 48 permanent redirect rules; local quality checks pass",
+    "remaining": "Existing injected analytics blocks the full production browser gate; platform visibility data requires account access"
   }
 }

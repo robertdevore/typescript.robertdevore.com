@@ -1,0 +1,101 @@
+phase,url,schema_types,json_ld_blocks,valid_json,visible_match,rich_result_eligible,issues,recommended_action
+baseline,https://typescript.robertdevore.com/,,0,True,N/A,not claimed,,describe visible content; no fabricated course eligibility
+baseline,https://typescript.robertdevore.com/research/,,0,True,N/A,not claimed,,describe visible content; no fabricated course eligibility
+baseline,https://typescript.robertdevore.com/labs/browser/,,0,True,N/A,not claimed,,describe visible content; no fabricated course eligibility
+baseline,https://typescript.robertdevore.com/course/,,0,True,N/A,not claimed,,describe visible content; no fabricated course eligibility
+baseline,https://typescript.robertdevore.com/tracks/,,0,True,N/A,not claimed,,describe visible content; no fabricated course eligibility
+baseline,https://typescript.robertdevore.com/about/,,0,True,N/A,not claimed,,describe visible content; no fabricated course eligibility
+baseline,https://typescript.robertdevore.com/builds/package-consumer/,,0,True,N/A,not claimed,,describe visible content; no fabricated course eligibility
+baseline,https://typescript.robertdevore.com/builds/capstone/,,0,True,N/A,not claimed,,describe visible content; no fabricated course eligibility
+baseline,https://typescript.robertdevore.com/builds/data-utility/,,0,True,N/A,not claimed,,describe visible content; no fabricated course eligibility
+baseline,https://typescript.robertdevore.com/builds/library-cli/,,0,True,N/A,not claimed,,describe visible content; no fabricated course eligibility
+baseline,https://typescript.robertdevore.com/builds/application/,,0,True,N/A,not claimed,,describe visible content; no fabricated course eligibility
+baseline,https://typescript.robertdevore.com/search/,,0,True,N/A,not claimed,,describe visible content; no fabricated course eligibility
+baseline,https://typescript.robertdevore.com/lessons/generics/,,0,True,N/A,not claimed,,describe visible content; no fabricated course eligibility
+baseline,https://typescript.robertdevore.com/lessons/publishing/,,0,True,N/A,not claimed,,describe visible content; no fabricated course eligibility
+baseline,https://typescript.robertdevore.com/lessons/mapped-types/,,0,True,N/A,not claimed,,describe visible content; no fabricated course eligibility
+baseline,https://typescript.robertdevore.com/lessons/interfaces-and-aliases/,,0,True,N/A,not claimed,,describe visible content; no fabricated course eligibility
+baseline,https://typescript.robertdevore.com/lessons/http-clients/,,0,True,N/A,not claimed,,describe visible content; no fabricated course eligibility
+baseline,https://typescript.robertdevore.com/lessons/javascript-migration/,,0,True,N/A,not claimed,,describe visible content; no fabricated course eligibility
+baseline,https://typescript.robertdevore.com/lessons/variance/,,0,True,N/A,not claimed,,describe visible content; no fabricated course eligibility
+baseline,https://typescript.robertdevore.com/lessons/assertions-const-satisfies/,,0,True,N/A,not claimed,,describe visible content; no fabricated course eligibility
+baseline,https://typescript.robertdevore.com/lessons/declaration-files/,,0,True,N/A,not claimed,,describe visible content; no fabricated course eligibility
+baseline,https://typescript.robertdevore.com/lessons/compiler-tooling/,,0,True,N/A,not claimed,,describe visible content; no fabricated course eligibility
+baseline,https://typescript.robertdevore.com/lessons/runtime-validation/,,0,True,N/A,not claimed,,describe visible content; no fabricated course eligibility
+baseline,https://typescript.robertdevore.com/lessons/library-design/,,0,True,N/A,not claimed,,describe visible content; no fabricated course eligibility
+baseline,https://typescript.robertdevore.com/lessons/template-literal-types/,,0,True,N/A,not claimed,,describe visible content; no fabricated course eligibility
+baseline,https://typescript.robertdevore.com/lessons/tsconfig/,,0,True,N/A,not claimed,,describe visible content; no fabricated course eligibility
+baseline,https://typescript.robertdevore.com/lessons/values-and-types/,,0,True,N/A,not claimed,,describe visible content; no fabricated course eligibility
+baseline,https://typescript.robertdevore.com/lessons/async/,,0,True,N/A,not claimed,,describe visible content; no fabricated course eligibility
+baseline,https://typescript.robertdevore.com/lessons/setup/,,0,True,N/A,not claimed,,describe visible content; no fabricated course eligibility
+baseline,https://typescript.robertdevore.com/lessons/shipping/,,0,True,N/A,not claimed,,describe visible content; no fabricated course eligibility
+baseline,https://typescript.robertdevore.com/lessons/workspaces/,,0,True,N/A,not claimed,,describe visible content; no fabricated course eligibility
+baseline,https://typescript.robertdevore.com/lessons/testing/,,0,True,N/A,not claimed,,describe visible content; no fabricated course eligibility
+baseline,https://typescript.robertdevore.com/lessons/objects-arrays-tuples/,,0,True,N/A,not claimed,,describe visible content; no fabricated course eligibility
+baseline,https://typescript.robertdevore.com/lessons/architecture/,,0,True,N/A,not claimed,,describe visible content; no fabricated course eligibility
+baseline,https://typescript.robertdevore.com/lessons/runtime-safety/,,0,True,N/A,not claimed,,describe visible content; no fabricated course eligibility
+baseline,https://typescript.robertdevore.com/lessons/structural-typing/,,0,True,N/A,not claimed,,describe visible content; no fabricated course eligibility
+baseline,https://typescript.robertdevore.com/lessons/node-application/,,0,True,N/A,not claimed,,describe visible content; no fabricated course eligibility
+baseline,https://typescript.robertdevore.com/lessons/exhaustiveness/,,0,True,N/A,not claimed,,describe visible content; no fabricated course eligibility
+baseline,https://typescript.robertdevore.com/lessons/functions/,,0,True,N/A,not claimed,,describe visible content; no fabricated course eligibility
+baseline,https://typescript.robertdevore.com/lessons/errors-and-null/,,0,True,N/A,not claimed,,describe visible content; no fabricated course eligibility
+baseline,https://typescript.robertdevore.com/lessons/narrowing/,,0,True,N/A,not claimed,,describe visible content; no fabricated course eligibility
+baseline,https://typescript.robertdevore.com/lessons/advanced-design/,,0,True,N/A,not claimed,,describe visible content; no fabricated course eligibility
+baseline,https://typescript.robertdevore.com/lessons/performance/,,0,True,N/A,not claimed,,describe visible content; no fabricated course eligibility
+baseline,https://typescript.robertdevore.com/lessons/modules/,,0,True,N/A,not claimed,,describe visible content; no fabricated course eligibility
+baseline,https://typescript.robertdevore.com/lessons/keyof-typeof-indexed-access/,,0,True,N/A,not claimed,,describe visible content; no fabricated course eligibility
+baseline,https://typescript.robertdevore.com/lessons/static-analysis/,,0,True,N/A,not claimed,,describe visible content; no fabricated course eligibility
+baseline,https://typescript.robertdevore.com/lessons/conditional-types/,,0,True,N/A,not claimed,,describe visible content; no fabricated course eligibility
+baseline,https://typescript.robertdevore.com/lessons/any-unknown-never-void/,,0,True,N/A,not claimed,,describe visible content; no fabricated course eligibility
+baseline,https://typescript.robertdevore.com/reference/,,0,True,N/A,not claimed,,describe visible content; no fabricated course eligibility
+baseline,https://typescript.robertdevore.com/404/,,0,True,N/A,not claimed,,describe visible content; no fabricated course eligibility
+after,https://typescript.robertdevore.com/,WebSite;WebPage,1,True,manual template/content review required,not claimed,,describe visible content; no fabricated course eligibility
+after,https://typescript.robertdevore.com/research/,WebSite;WebPage;BreadcrumbList,1,True,manual template/content review required,not claimed,,describe visible content; no fabricated course eligibility
+after,https://typescript.robertdevore.com/labs/browser/,,0,True,N/A,not claimed,,describe visible content; no fabricated course eligibility
+after,https://typescript.robertdevore.com/course/,WebSite;CollectionPage;BreadcrumbList,1,True,manual template/content review required,not claimed,,describe visible content; no fabricated course eligibility
+after,https://typescript.robertdevore.com/tracks/,WebSite;WebPage;BreadcrumbList,1,True,manual template/content review required,not claimed,,describe visible content; no fabricated course eligibility
+after,https://typescript.robertdevore.com/about/,WebSite;AboutPage;BreadcrumbList,1,True,manual template/content review required,not claimed,,describe visible content; no fabricated course eligibility
+after,https://typescript.robertdevore.com/builds/package-consumer/,WebSite;WebPage;LearningResource;BreadcrumbList,1,True,manual template/content review required,not claimed,,describe visible content; no fabricated course eligibility
+after,https://typescript.robertdevore.com/builds/capstone/,WebSite;WebPage;LearningResource;BreadcrumbList,1,True,manual template/content review required,not claimed,,describe visible content; no fabricated course eligibility
+after,https://typescript.robertdevore.com/builds/data-utility/,WebSite;WebPage;LearningResource;BreadcrumbList,1,True,manual template/content review required,not claimed,,describe visible content; no fabricated course eligibility
+after,https://typescript.robertdevore.com/builds/library-cli/,WebSite;WebPage;LearningResource;BreadcrumbList,1,True,manual template/content review required,not claimed,,describe visible content; no fabricated course eligibility
+after,https://typescript.robertdevore.com/builds/application/,WebSite;WebPage;LearningResource;BreadcrumbList,1,True,manual template/content review required,not claimed,,describe visible content; no fabricated course eligibility
+after,https://typescript.robertdevore.com/search/,,0,True,N/A,not claimed,,describe visible content; no fabricated course eligibility
+after,https://typescript.robertdevore.com/lessons/generics/,WebSite;WebPage;LearningResource;BreadcrumbList,1,True,manual template/content review required,not claimed,,describe visible content; no fabricated course eligibility
+after,https://typescript.robertdevore.com/lessons/publishing/,WebSite;WebPage;LearningResource;BreadcrumbList,1,True,manual template/content review required,not claimed,,describe visible content; no fabricated course eligibility
+after,https://typescript.robertdevore.com/lessons/mapped-types/,WebSite;WebPage;LearningResource;BreadcrumbList,1,True,manual template/content review required,not claimed,,describe visible content; no fabricated course eligibility
+after,https://typescript.robertdevore.com/lessons/interfaces-and-aliases/,WebSite;WebPage;LearningResource;BreadcrumbList,1,True,manual template/content review required,not claimed,,describe visible content; no fabricated course eligibility
+after,https://typescript.robertdevore.com/lessons/http-clients/,WebSite;WebPage;LearningResource;BreadcrumbList,1,True,manual template/content review required,not claimed,,describe visible content; no fabricated course eligibility
+after,https://typescript.robertdevore.com/lessons/javascript-migration/,WebSite;WebPage;LearningResource;BreadcrumbList,1,True,manual template/content review required,not claimed,,describe visible content; no fabricated course eligibility
+after,https://typescript.robertdevore.com/lessons/variance/,WebSite;WebPage;LearningResource;BreadcrumbList,1,True,manual template/content review required,not claimed,,describe visible content; no fabricated course eligibility
+after,https://typescript.robertdevore.com/lessons/assertions-const-satisfies/,WebSite;WebPage;LearningResource;BreadcrumbList,1,True,manual template/content review required,not claimed,,describe visible content; no fabricated course eligibility
+after,https://typescript.robertdevore.com/lessons/declaration-files/,WebSite;WebPage;LearningResource;BreadcrumbList,1,True,manual template/content review required,not claimed,,describe visible content; no fabricated course eligibility
+after,https://typescript.robertdevore.com/lessons/compiler-tooling/,WebSite;WebPage;LearningResource;BreadcrumbList,1,True,manual template/content review required,not claimed,,describe visible content; no fabricated course eligibility
+after,https://typescript.robertdevore.com/lessons/runtime-validation/,WebSite;WebPage;LearningResource;BreadcrumbList,1,True,manual template/content review required,not claimed,,describe visible content; no fabricated course eligibility
+after,https://typescript.robertdevore.com/lessons/library-design/,WebSite;WebPage;LearningResource;BreadcrumbList,1,True,manual template/content review required,not claimed,,describe visible content; no fabricated course eligibility
+after,https://typescript.robertdevore.com/lessons/template-literal-types/,WebSite;WebPage;LearningResource;BreadcrumbList,1,True,manual template/content review required,not claimed,,describe visible content; no fabricated course eligibility
+after,https://typescript.robertdevore.com/lessons/tsconfig/,WebSite;WebPage;LearningResource;BreadcrumbList,1,True,manual template/content review required,not claimed,,describe visible content; no fabricated course eligibility
+after,https://typescript.robertdevore.com/lessons/values-and-types/,WebSite;WebPage;LearningResource;BreadcrumbList,1,True,manual template/content review required,not claimed,,describe visible content; no fabricated course eligibility
+after,https://typescript.robertdevore.com/lessons/async/,WebSite;WebPage;LearningResource;BreadcrumbList,1,True,manual template/content review required,not claimed,,describe visible content; no fabricated course eligibility
+after,https://typescript.robertdevore.com/lessons/setup/,WebSite;WebPage;LearningResource;BreadcrumbList,1,True,manual template/content review required,not claimed,,describe visible content; no fabricated course eligibility
+after,https://typescript.robertdevore.com/lessons/shipping/,WebSite;WebPage;LearningResource;BreadcrumbList,1,True,manual template/content review required,not claimed,,describe visible content; no fabricated course eligibility
+after,https://typescript.robertdevore.com/lessons/workspaces/,WebSite;WebPage;LearningResource;BreadcrumbList,1,True,manual template/content review required,not claimed,,describe visible content; no fabricated course eligibility
+after,https://typescript.robertdevore.com/lessons/testing/,WebSite;WebPage;LearningResource;BreadcrumbList,1,True,manual template/content review required,not claimed,,describe visible content; no fabricated course eligibility
+after,https://typescript.robertdevore.com/lessons/objects-arrays-tuples/,WebSite;WebPage;LearningResource;BreadcrumbList,1,True,manual template/content review required,not claimed,,describe visible content; no fabricated course eligibility
+after,https://typescript.robertdevore.com/lessons/architecture/,WebSite;WebPage;LearningResource;BreadcrumbList,1,True,manual template/content review required,not claimed,,describe visible content; no fabricated course eligibility
+after,https://typescript.robertdevore.com/lessons/runtime-safety/,WebSite;WebPage;LearningResource;BreadcrumbList,1,True,manual template/content review required,not claimed,,describe visible content; no fabricated course eligibility
+after,https://typescript.robertdevore.com/lessons/structural-typing/,WebSite;WebPage;LearningResource;BreadcrumbList,1,True,manual template/content review required,not claimed,,describe visible content; no fabricated course eligibility
+after,https://typescript.robertdevore.com/lessons/node-application/,WebSite;WebPage;LearningResource;BreadcrumbList,1,True,manual template/content review required,not claimed,,describe visible content; no fabricated course eligibility
+after,https://typescript.robertdevore.com/lessons/exhaustiveness/,WebSite;WebPage;LearningResource;BreadcrumbList,1,True,manual template/content review required,not claimed,,describe visible content; no fabricated course eligibility
+after,https://typescript.robertdevore.com/lessons/functions/,WebSite;WebPage;LearningResource;BreadcrumbList,1,True,manual template/content review required,not claimed,,describe visible content; no fabricated course eligibility
+after,https://typescript.robertdevore.com/lessons/errors-and-null/,WebSite;WebPage;LearningResource;BreadcrumbList,1,True,manual template/content review required,not claimed,,describe visible content; no fabricated course eligibility
+after,https://typescript.robertdevore.com/lessons/narrowing/,WebSite;WebPage;LearningResource;BreadcrumbList,1,True,manual template/content review required,not claimed,,describe visible content; no fabricated course eligibility
+after,https://typescript.robertdevore.com/lessons/advanced-design/,WebSite;WebPage;LearningResource;BreadcrumbList,1,True,manual template/content review required,not claimed,,describe visible content; no fabricated course eligibility
+after,https://typescript.robertdevore.com/lessons/performance/,WebSite;WebPage;LearningResource;BreadcrumbList,1,True,manual template/content review required,not claimed,,describe visible content; no fabricated course eligibility
+after,https://typescript.robertdevore.com/lessons/modules/,WebSite;WebPage;LearningResource;BreadcrumbList,1,True,manual template/content review required,not claimed,,describe visible content; no fabricated course eligibility
+after,https://typescript.robertdevore.com/lessons/keyof-typeof-indexed-access/,WebSite;WebPage;LearningResource;BreadcrumbList,1,True,manual template/content review required,not claimed,,describe visible content; no fabricated course eligibility
+after,https://typescript.robertdevore.com/lessons/static-analysis/,WebSite;WebPage;LearningResource;BreadcrumbList,1,True,manual template/content review required,not claimed,,describe visible content; no fabricated course eligibility
+after,https://typescript.robertdevore.com/lessons/conditional-types/,WebSite;WebPage;LearningResource;BreadcrumbList,1,True,manual template/content review required,not claimed,,describe visible content; no fabricated course eligibility
+after,https://typescript.robertdevore.com/lessons/any-unknown-never-void/,WebSite;WebPage;LearningResource;BreadcrumbList,1,True,manual template/content review required,not claimed,,describe visible content; no fabricated course eligibility
+after,https://typescript.robertdevore.com/reference/,WebSite;CollectionPage;BreadcrumbList,1,True,manual template/content review required,not claimed,,describe visible content; no fabricated course eligibility
+after,https://typescript.robertdevore.com/404/,,0,True,N/A,not claimed,,describe visible content; no fabricated course eligibility

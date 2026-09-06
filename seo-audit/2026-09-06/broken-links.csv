@@ -1,0 +1,2 @@
+phase,source_url,destination_url,link_type,anchor_text,http_status,evidence,recommended_action,chain_length,final_url,link_context,rel,verification
+baseline,https://typescript.robertdevore.com/404/,https://typescript.robertdevore.com/404/,internal,Skip to content,404,missing local target or fragment,,0,https://typescript.robertdevore.com/404/,HTML anchor,,missing local target or fragment

@@ -1,6 +1,6 @@
 {
-  "verifiedAt": "2026-09-06T22:32:31.186Z",
-  "addresses": ["104.21.76.202", "172.67.200.180"],
+  "verifiedAt": "2026-09-06T22:57:24.678Z",
+  "addresses": ["172.67.200.180", "104.21.76.202"],
   "certificate": {
     "authorized": true,
     "subject": {
@@ -73,6 +73,6 @@
     "/labs/browser/"
   ],
   "notFound": 404,
-  "trailingSlash": 307,
+  "trailingSlash": 301,
   "httpRedirect": 301
 }

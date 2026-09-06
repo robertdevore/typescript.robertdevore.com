@@ -1,0 +1,7 @@
+{
+  "field": "broken_internal_links",
+  "recorded": 1,
+  "verified_actual": 0,
+  "reason": "The audit initially resolved the 404 page's local #main anchor using canonical /404/ instead of generated 404.html. The target exists. Site link tests passed. The raw baseline is preserved; the after crawler resolves the generated file correctly.",
+  "affected_url": "https://typescript.robertdevore.com/404/"
+}

@@ -1,0 +1,19 @@
+phase,source_url,source_variant,http_status,target_url,chain_length,final_status,canonical_target,query_preserved,verification,issues
+baseline,https://typescript.robertdevore.com/,host/path/query probe,200,,0,200,https://typescript.robertdevore.com/,N/A,live GET,
+baseline,http://typescript.robertdevore.com/,host/path/query probe,301,https://typescript.robertdevore.com/,1,200,https://typescript.robertdevore.com/,N/A,live GET,
+baseline,https://typescript.robertdevore.com/lessons/performance,host/path/query probe,307,/lessons/performance/,1,200,https://typescript.robertdevore.com/lessons/performance/,N/A,live GET,temporary slash redirect
+baseline,https://typescript.robertdevore.com/lessons/performance?audit=keep,host/path/query probe,307,/lessons/performance/?audit=keep,1,200,https://typescript.robertdevore.com/lessons/performance/?audit=keep,True,live GET,temporary slash redirect
+baseline,https://typescript.robertdevore.com/lessons/performance/?audit=keep,host/path/query probe,200,,0,200,https://typescript.robertdevore.com/lessons/performance/?audit=keep,True,live GET,
+baseline,https://typescript.robertdevore.com/index.html,host/path/query probe,307,/,1,200,https://typescript.robertdevore.com/,N/A,live GET,temporary slash redirect
+baseline,https://typescript.robertdevore.com/definitely-not-a-lesson/,host/path/query probe,404,,0,404,https://typescript.robertdevore.com/definitely-not-a-lesson/,N/A,live GET,
+baseline,https://www.typescript.robertdevore.com/,host/path/query probe,0,,0,0,https://www.typescript.robertdevore.com/,N/A,live GET,unprovisioned www subdomain
+baseline,http://www.typescript.robertdevore.com/,host/path/query probe,0,,0,0,http://www.typescript.robertdevore.com/,N/A,live GET,unprovisioned www subdomain
+after,https://typescript.robertdevore.com/,host/path/query probe,200,,0,200,https://typescript.robertdevore.com/,N/A,live GET,
+after,http://typescript.robertdevore.com/,host/path/query probe,301,https://typescript.robertdevore.com/,1,200,https://typescript.robertdevore.com/,N/A,live GET,
+after,https://typescript.robertdevore.com/lessons/performance,host/path/query probe,301,/lessons/performance/,1,200,https://typescript.robertdevore.com/lessons/performance/,N/A,live GET,
+after,https://typescript.robertdevore.com/lessons/performance?audit=keep,host/path/query probe,301,/lessons/performance/?audit=keep,1,200,https://typescript.robertdevore.com/lessons/performance/?audit=keep,True,live GET,
+after,https://typescript.robertdevore.com/lessons/performance/?audit=keep,host/path/query probe,200,,0,200,https://typescript.robertdevore.com/lessons/performance/?audit=keep,True,live GET,
+after,https://typescript.robertdevore.com/index.html,host/path/query probe,301,/,1,200,https://typescript.robertdevore.com/,N/A,live GET,
+after,https://typescript.robertdevore.com/definitely-not-a-lesson/,host/path/query probe,404,,0,404,https://typescript.robertdevore.com/definitely-not-a-lesson/,N/A,live GET,
+after,https://www.typescript.robertdevore.com/,host/path/query probe,0,,0,0,https://www.typescript.robertdevore.com/,N/A,live GET,unprovisioned www subdomain
+after,http://www.typescript.robertdevore.com/,host/path/query probe,0,,0,0,http://www.typescript.robertdevore.com/,N/A,live GET,unprovisioned www subdomain

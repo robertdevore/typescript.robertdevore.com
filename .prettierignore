@@ -9,3 +9,6 @@ assets/fonts
 labs/*/dist
 # Intentional narrow layout of the homepage teaching example.
 labs/hero.ts
+
+# Immutable audit receipts retain their original bytes.
+seo-audit/**/raw

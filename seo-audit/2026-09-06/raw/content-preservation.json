@@ -1,0 +1,402 @@
+[
+  {
+    "url": "https://typescript.robertdevore.com/",
+    "same_title": true,
+    "same_description": true,
+    "word_delta": 0,
+    "before_hash": "1074ec07885e9297b304e2d857732b5e84cbb36c40e8b956d17a311d5b7cea98",
+    "after_hash": "1074ec07885e9297b304e2d857732b5e84cbb36c40e8b956d17a311d5b7cea98"
+  },
+  {
+    "url": "https://typescript.robertdevore.com/research/",
+    "same_title": true,
+    "same_description": true,
+    "word_delta": 4,
+    "before_hash": "01a39d234104e6bc4442b387b3ed4445e1dc279049dd2312218600974c5d965d",
+    "after_hash": "4a85cb8a8743638e76c743ab21710f6c3dcf395cc254282675f1c7df6d5e237f"
+  },
+  {
+    "url": "https://typescript.robertdevore.com/labs/browser/",
+    "same_title": true,
+    "same_description": true,
+    "word_delta": 0,
+    "before_hash": "0b84ff98ed3c6a829232d891198f1c37b92d5b348df68750c74112c88f49dd62",
+    "after_hash": "0b84ff98ed3c6a829232d891198f1c37b92d5b348df68750c74112c88f49dd62"
+  },
+  {
+    "url": "https://typescript.robertdevore.com/course/",
+    "same_title": true,
+    "same_description": true,
+    "word_delta": 5,
+    "before_hash": "acd357178fd4eee35e652732e84641277ed4d8823c79e1014cbf26ffd8897ae3",
+    "after_hash": "41394209bbfaa57fa449d60abc97f74cbb95b84a22580d45cd4d4175fc02390d"
+  },
+  {
+    "url": "https://typescript.robertdevore.com/tracks/",
+    "same_title": true,
+    "same_description": true,
+    "word_delta": 4,
+    "before_hash": "6b730b6e4f4780b000fd2a41b6ee94e7fdfdd60c5520a324a95c145b5a946116",
+    "after_hash": "9a7e08016ec69b0cacc3502bfea038ac0b92965694216689a96676d04292a058"
+  },
+  {
+    "url": "https://typescript.robertdevore.com/about/",
+    "same_title": true,
+    "same_description": true,
+    "word_delta": 4,
+    "before_hash": "21c7a7f1612a1a8acbe10dd4e56620488264d24aa36418f2cf49993e98088ded",
+    "after_hash": "6c0b642fd7bfdf7f7836d0513849de34795250af4ac1dd6bee83cc70cb48d043"
+  },
+  {
+    "url": "https://typescript.robertdevore.com/builds/package-consumer/",
+    "same_title": true,
+    "same_description": true,
+    "word_delta": 8,
+    "before_hash": "16d25977bde12bcd7b54c0d4f50c4a4677e823a570c3284aec237aed20225b0b",
+    "after_hash": "e93c0d95d6e9b25cba87c6a852681aeffaeaf48bca58d4cea45657550ba5011e"
+  },
+  {
+    "url": "https://typescript.robertdevore.com/builds/capstone/",
+    "same_title": true,
+    "same_description": true,
+    "word_delta": 7,
+    "before_hash": "977e207633f3c4c916e406aa96254d48df8c19ff72de615d046f384b2e4782f2",
+    "after_hash": "cf8d0c713a3a1e9880ed939bce9e73d44169dba3c9d0ddc841652de87487c585"
+  },
+  {
+    "url": "https://typescript.robertdevore.com/builds/data-utility/",
+    "same_title": true,
+    "same_description": true,
+    "word_delta": 7,
+    "before_hash": "938e26414750397b76bb2a52c906e4d8e4bdb346772920876ebb56449f83c602",
+    "after_hash": "da88f77e203787d55282acb0252b945c241c07dea5be698bd3f8c4061ac54527"
+  },
+  {
+    "url": "https://typescript.robertdevore.com/builds/library-cli/",
+    "same_title": true,
+    "same_description": true,
+    "word_delta": 8,
+    "before_hash": "607f557349c6a76e875a190a23042f070637ecd4d28bffb9cee867373d162f52",
+    "after_hash": "3f19622165b9c4e6dfabb9e796ed65d4252577d02696713bb9f147fd9c19a3e3"
+  },
+  {
+    "url": "https://typescript.robertdevore.com/builds/application/",
+    "same_title": true,
+    "same_description": true,
+    "word_delta": 7,
+    "before_hash": "a3967d6918135923255dcb4868caeae5bca6ae156bcdc6eb712da6b7e139684c",
+    "after_hash": "9abc9e4a78660139254d0cf029786a57cb5c15a4ff4337854d7b4cb978672015"
+  },
+  {
+    "url": "https://typescript.robertdevore.com/search/",
+    "same_title": true,
+    "same_description": true,
+    "word_delta": 0,
+    "before_hash": "25119ca17d489a1f3680996f34b7bd73cbc3a56c46f8f3be35ea1788fef701fb",
+    "after_hash": "25119ca17d489a1f3680996f34b7bd73cbc3a56c46f8f3be35ea1788fef701fb"
+  },
+  {
+    "url": "https://typescript.robertdevore.com/lessons/generics/",
+    "same_title": true,
+    "same_description": true,
+    "word_delta": 6,
+    "before_hash": "7a2952e3e331c430027fd2fdb7c10623bd9a59fc10c3ea2a486feba1d5134a4d",
+    "after_hash": "6b326cccc95d450df897052a1b1c634d74785afe3ff74ea2b7129b5c213cfa71"
+  },
+  {
+    "url": "https://typescript.robertdevore.com/lessons/publishing/",
+    "same_title": true,
+    "same_description": true,
+    "word_delta": 5,
+    "before_hash": "7360532a5bc25bd2b3359d107a68a2e6e3b2ff831acda852f5b7b4c2e8f783dc",
+    "after_hash": "37d8054bf78dcdbb75fc12f9ae43e9cf7cc760067d445064fd6444258081a3d7"
+  },
+  {
+    "url": "https://typescript.robertdevore.com/lessons/mapped-types/",
+    "same_title": true,
+    "same_description": true,
+    "word_delta": 4,
+    "before_hash": "64676c3caa0d40d1c860ac6089c2a1c26924be6206e4e3f102a14265fc0c4aa2",
+    "after_hash": "eb17088dd79b2d28653ce6488ef6213b18bcf1eca85eeac3537218afbb13891b"
+  },
+  {
+    "url": "https://typescript.robertdevore.com/lessons/interfaces-and-aliases/",
+    "same_title": true,
+    "same_description": true,
+    "word_delta": 6,
+    "before_hash": "c546909a24a6aa79fc40fdcc777f99de0e2943b1094c8876912cbb55e9ca81e7",
+    "after_hash": "e23bbce0fc562e37a4a6ff3465e237561210487b33953d33de8635c44d8cf30b"
+  },
+  {
+    "url": "https://typescript.robertdevore.com/lessons/http-clients/",
+    "same_title": true,
+    "same_description": true,
+    "word_delta": 7,
+    "before_hash": "86799000917bde154156b357b902df8c0560f31d9880d550d978c902a87c0538",
+    "after_hash": "c174502da87dd11f7afaabedf7e50cd7d6299bbec84dd1b1f8d2e0079f770898"
+  },
+  {
+    "url": "https://typescript.robertdevore.com/lessons/javascript-migration/",
+    "same_title": true,
+    "same_description": true,
+    "word_delta": 5,
+    "before_hash": "4becacf50c124014637fd59a02f4b822ea35699eee7c0dc29ed58b75e907c861",
+    "after_hash": "25f933a0b014e4733a32c8679a764c4f0cb6d77e2f5c8b32828a0a3da7873c83"
+  },
+  {
+    "url": "https://typescript.robertdevore.com/lessons/variance/",
+    "same_title": true,
+    "same_description": true,
+    "word_delta": 6,
+    "before_hash": "0eef2308430adefd9561d2982e23348e4fa9f45d45a03f524476084f46c82ea7",
+    "after_hash": "e497149d52033d991cce2315a1cd8aba1999201c7f6b50513a08abf7dc4a026f"
+  },
+  {
+    "url": "https://typescript.robertdevore.com/lessons/assertions-const-satisfies/",
+    "same_title": true,
+    "same_description": true,
+    "word_delta": 7,
+    "before_hash": "82a8326f585b78039199f6791eb96ebea377d0912bc96fde5301d02aa4ade2f6",
+    "after_hash": "a5ab07311b09087e2138a1a7007374645f79bc803f8bb05515312f469452ecc2"
+  },
+  {
+    "url": "https://typescript.robertdevore.com/lessons/declaration-files/",
+    "same_title": true,
+    "same_description": true,
+    "word_delta": 4,
+    "before_hash": "e90cfa00e7b27ff5b586e9089a4c7750631a378ade0a2173cc19f3505e00ba67",
+    "after_hash": "ea91eebd5a5832b69609842ac47af06d93bab6548020ba1db497c194b89c9e49"
+  },
+  {
+    "url": "https://typescript.robertdevore.com/lessons/compiler-tooling/",
+    "same_title": true,
+    "same_description": true,
+    "word_delta": 7,
+    "before_hash": "ce16578dee2a9590149e95ee75acf5767186f985d176d1dfb8b16a60be78cc35",
+    "after_hash": "0f42104fc33f4d5cf944c8a0ee96af1bb5d2ad80a53c49192ed1fdb900ff910a"
+  },
+  {
+    "url": "https://typescript.robertdevore.com/lessons/runtime-validation/",
+    "same_title": true,
+    "same_description": true,
+    "word_delta": 7,
+    "before_hash": "5bdf695b488dc9b866376f4d4bf818c76e8a69936c3077b28f5dab94c2683c02",
+    "after_hash": "92f0ee89bb154cfe68a6467b8905ea693af734992579051109d021a521f0c761"
+  },
+  {
+    "url": "https://typescript.robertdevore.com/lessons/library-design/",
+    "same_title": true,
+    "same_description": true,
+    "word_delta": 5,
+    "before_hash": "8c355f3e932974398bc9db343f31754fbed5fd77d4a140b30a1c89744ff5a9bc",
+    "after_hash": "840f9417797b21e0a80c5d1883b4570d0dbb89c1322766da06a895fb57e64e6d"
+  },
+  {
+    "url": "https://typescript.robertdevore.com/lessons/template-literal-types/",
+    "same_title": true,
+    "same_description": true,
+    "word_delta": 5,
+    "before_hash": "068f38b950e195d5042ebb30ff5c4d68443b5467356eb0426023a8fe91989bad",
+    "after_hash": "172c7bf373970fc4be031055ed8cef90ea4676f95afec74df0125821082d6c31"
+  },
+  {
+    "url": "https://typescript.robertdevore.com/lessons/tsconfig/",
+    "same_title": true,
+    "same_description": true,
+    "word_delta": 4,
+    "before_hash": "9b24503b7440df64c5aea64d3e5833143ba5627b4844173d99b302808b428918",
+    "after_hash": "cb1121db242ec89fa2c4a984d4c2e90fc896f75054f3686eefc580579f2abcf6"
+  },
+  {
+    "url": "https://typescript.robertdevore.com/lessons/values-and-types/",
+    "same_title": true,
+    "same_description": true,
+    "word_delta": 7,
+    "before_hash": "de597eb618aebf83f8aa97be422e7584de3734177fd2a2084864d4c8e7c981c6",
+    "after_hash": "4dffbdaa16ac26a3e988ba358081457a764b83db11d14df78dd73f0fcc5bae38"
+  },
+  {
+    "url": "https://typescript.robertdevore.com/lessons/async/",
+    "same_title": true,
+    "same_description": true,
+    "word_delta": 6,
+    "before_hash": "97d1e74ed5b60854f6e46af12c9128d740e95c409b9c55d2cf546a675c80c2bb",
+    "after_hash": "10743462fd54878664476ceb6e185d2dbe00493344e51e774e4e6aa309e09208"
+  },
+  {
+    "url": "https://typescript.robertdevore.com/lessons/setup/",
+    "same_title": true,
+    "same_description": true,
+    "word_delta": 5,
+    "before_hash": "28692d100f16dc4bb69f269844d946131b21fbe2537b254aa5b264d7ffd3b0dc",
+    "after_hash": "bc75548ab8823bbed6480cffffffcc4c27f07a47a25c7e5898cdb35f0e542328"
+  },
+  {
+    "url": "https://typescript.robertdevore.com/lessons/shipping/",
+    "same_title": true,
+    "same_description": true,
+    "word_delta": 6,
+    "before_hash": "d18eef0bb615d7bcd70b6a775c8e505422e1c2674bfff7882551667735dc9838",
+    "after_hash": "ef321c8d96ef34933a311feb7c3b9601f5072ef6d984470f42e3f8486d7f44f0"
+  },
+  {
+    "url": "https://typescript.robertdevore.com/lessons/workspaces/",
+    "same_title": true,
+    "same_description": true,
+    "word_delta": 6,
+    "before_hash": "39da1a3715f3a0c7d4831b030dd07beb5760f0e91a1e9ab9cdc351369346f447",
+    "after_hash": "873f2cc632d678eb2363b28fa2b4950cb54869aaf1c7764c766085926971c0a2"
+  },
+  {
+    "url": "https://typescript.robertdevore.com/lessons/testing/",
+    "same_title": true,
+    "same_description": true,
+    "word_delta": 7,
+    "before_hash": "5274ebfa0fc01586009b39f58054f0a4cb7ba70942c8a15240a5caa00e805332",
+    "after_hash": "d9b55809252c4056036f367fe2aa6321608f6026b525419ca648cb76530b1ac1"
+  },
+  {
+    "url": "https://typescript.robertdevore.com/lessons/objects-arrays-tuples/",
+    "same_title": true,
+    "same_description": true,
+    "word_delta": 6,
+    "before_hash": "548ccbb502029be262f005d4c5bc0a6bf5526cbf318dc3f7a7eb9fc33ba0dc3b",
+    "after_hash": "ad7cae49c2aa85bddd1eed4892adb525001a4e0d1e3b7f638146f11ea237c422"
+  },
+  {
+    "url": "https://typescript.robertdevore.com/lessons/architecture/",
+    "same_title": true,
+    "same_description": true,
+    "word_delta": 7,
+    "before_hash": "648d945cbc8484c49c72c8e3dc696b7d82e90d7dbb28feba45cb506101d99564",
+    "after_hash": "0fa1322eafbdd0cfc92e4929141b57ce879c3cf93390871775a5085067f30933"
+  },
+  {
+    "url": "https://typescript.robertdevore.com/lessons/runtime-safety/",
+    "same_title": true,
+    "same_description": true,
+    "word_delta": 7,
+    "before_hash": "e3472366c9854a3cf8f33d7943e6576214aea6036b8111ff1e697f4c8557c5e7",
+    "after_hash": "846fbc3b872fa6b24255475a0e9d7fa2177ee60d832565a059e8dbb4582f93e6"
+  },
+  {
+    "url": "https://typescript.robertdevore.com/lessons/structural-typing/",
+    "same_title": true,
+    "same_description": true,
+    "word_delta": 6,
+    "before_hash": "f61db76be4ee267ad4af831c108c897e6d7f0e74707a28862e99d33a666fb6c4",
+    "after_hash": "6bc9b1e7dac9aacc7ecf34880b8bae7f72f43c5952b2cce1745fa37fe4daddca"
+  },
+  {
+    "url": "https://typescript.robertdevore.com/lessons/node-application/",
+    "same_title": true,
+    "same_description": true,
+    "word_delta": 6,
+    "before_hash": "222ef0dbcfc69bf80918e2e14080b7f981f0f3641f791d796178b58c8e6d607b",
+    "after_hash": "6786261ff8ed07c43561751cf2c6385e217e5051a77540bf3a0df74307c151cf"
+  },
+  {
+    "url": "https://typescript.robertdevore.com/lessons/exhaustiveness/",
+    "same_title": true,
+    "same_description": true,
+    "word_delta": 6,
+    "before_hash": "27375e678ecea15290c3a4fd4793add8413016cb1ed7f112b15b0999d0c6dbd0",
+    "after_hash": "1e61d495eaf606a552d8fa96939df072fc3b76c63c6243b98916efef711633fe"
+  },
+  {
+    "url": "https://typescript.robertdevore.com/lessons/functions/",
+    "same_title": true,
+    "same_description": true,
+    "word_delta": 5,
+    "before_hash": "15d43710452873e75093ac8e8d683328bd486f2870168ff3205869fb217279b8",
+    "after_hash": "c6af57122846873ed54de8537249b9c61a120deb2b6abd3a468ae7ffb1a77429"
+  },
+  {
+    "url": "https://typescript.robertdevore.com/lessons/errors-and-null/",
+    "same_title": true,
+    "same_description": true,
+    "word_delta": 6,
+    "before_hash": "03b9f39aa560d79354bf3756b9494c100b4074945856c45fdf15976d55b7e271",
+    "after_hash": "1780bfd529b6360ee59171661e2c9cbdd476617c43473ef3e4bb4ae5ad7d26d6"
+  },
+  {
+    "url": "https://typescript.robertdevore.com/lessons/narrowing/",
+    "same_title": true,
+    "same_description": true,
+    "word_delta": 6,
+    "before_hash": "fd8bc69a6fe5f8ef7b13afe86febfc166c4575b62e27c9cf2142a4666815be56",
+    "after_hash": "da542c558440da7ddc3518b01105385ae5a03953ec1b821eee03650fc2f2b341"
+  },
+  {
+    "url": "https://typescript.robertdevore.com/lessons/advanced-design/",
+    "same_title": true,
+    "same_description": true,
+    "word_delta": 5,
+    "before_hash": "af5778a56f67178b7d70d8ea7bc3cfbc5adfa811dc11f095a37819c2a09bf790",
+    "after_hash": "c9fbf7edce628ef0b0273bd6fc41c7a1af4bc4d7d7c581c0e7af5ccd7d725cd0"
+  },
+  {
+    "url": "https://typescript.robertdevore.com/lessons/performance/",
+    "same_title": true,
+    "same_description": true,
+    "word_delta": 6,
+    "before_hash": "68f6066256e83e785e698779d419511f07ceb37e53dac7f89a64950f725f8e76",
+    "after_hash": "e126bde65ee64a465363435d39daf399f007582f0a5a3653928a19d9f7d534ed"
+  },
+  {
+    "url": "https://typescript.robertdevore.com/lessons/modules/",
+    "same_title": true,
+    "same_description": true,
+    "word_delta": 7,
+    "before_hash": "1961c5b55bfb7f326b805a4c7e6734246103fd9c2b45f27d7295d513cf267aef",
+    "after_hash": "a2a42bb35fb209fe4fdbffffb4444425dda40d7eee8ce61f0e51f3f73c3b6bfe"
+  },
+  {
+    "url": "https://typescript.robertdevore.com/lessons/keyof-typeof-indexed-access/",
+    "same_title": true,
+    "same_description": true,
+    "word_delta": 7,
+    "before_hash": "ed4024289a01a70dbbf9c37d245e4917cf29222704bdc58d3376ad65e2a604b1",
+    "after_hash": "20693f012431d6e6b6326ca930e0e34b2e73f949cacf456f4cfbf0a4707c87be"
+  },
+  {
+    "url": "https://typescript.robertdevore.com/lessons/static-analysis/",
+    "same_title": true,
+    "same_description": true,
+    "word_delta": 7,
+    "before_hash": "5e48f47f274f989a01509e97d7009b64944ebaaece86ca38ad2b38f649c52c6e",
+    "after_hash": "2d07b3526d81ffbb30b3557c267878dc80e113e4f7842f881f6437924320e120"
+  },
+  {
+    "url": "https://typescript.robertdevore.com/lessons/conditional-types/",
+    "same_title": true,
+    "same_description": true,
+    "word_delta": 6,
+    "before_hash": "b48f5cb86954d3429e70b78fe6d6734ef2161accc076424c9616e17aea0c9e53",
+    "after_hash": "4a0f63c6c663f049cd22b2a6dda8b6eda791dbd20eaf8f495a6265dae157f50c"
+  },
+  {
+    "url": "https://typescript.robertdevore.com/lessons/any-unknown-never-void/",
+    "same_title": true,
+    "same_description": true,
+    "word_delta": 7,
+    "before_hash": "33064e16eb939f1b3a5f140d57618a6f3ed7c0ad542b29fba6d1cba34dc1612f",
+    "after_hash": "2b1127a7038b132acdf047a2ff304560b69384971fceffc3fe062c52b0182720"
+  },
+  {
+    "url": "https://typescript.robertdevore.com/reference/",
+    "same_title": true,
+    "same_description": true,
+    "word_delta": 3,
+    "before_hash": "dae52dd2cc538408fed2f743671831a1a7f4e921fccd0dacce1f39ffb08b94a8",
+    "after_hash": "50a5efd5d949b55630e4e86db1c088116f7c8a8cfc46eb91f423dc18efdf00d4"
+  },
+  {
+    "url": "https://typescript.robertdevore.com/404/",
+    "same_title": true,
+    "same_description": true,
+    "word_delta": 0,
+    "before_hash": "9735a21c6ef67bd2666697a745842d353d5c6ab1df9d3dc2d5cfdc8bd8e58c97",
+    "after_hash": "9735a21c6ef67bd2666697a745842d353d5c6ab1df9d3dc2d5cfdc8bd8e58c97"
+  }
+]

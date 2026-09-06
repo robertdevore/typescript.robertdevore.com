@@ -1,0 +1,213 @@
+{
+  "cards": [
+    {
+      "card": "exhaustiveness",
+      "svg_sha256": "1ca37b25c62453536b912bca2518ab87a471c0e7e04a8bce2a4a98606e235a18",
+      "png_bytes": 344908
+    },
+    {
+      "card": "interfaces-and-aliases",
+      "svg_sha256": "0a7dec003119bd47c86d5b642426001eb5352f5915c148a20dc8c85f12fb15d9",
+      "png_bytes": 343952
+    },
+    {
+      "card": "package-consumer",
+      "svg_sha256": "93dd5b05f45b8bc2505a958d8a8549f5ee2ca90a171da1e716828d89f59e2c6f",
+      "png_bytes": 346611
+    },
+    {
+      "card": "narrowing",
+      "svg_sha256": "2c11efa6473c6094c1c9274224fe8c5001293f1273832ea6c3f0816d06d8504d",
+      "png_bytes": 342111
+    },
+    {
+      "card": "mapped-types",
+      "svg_sha256": "5d263ec829f82cf792a5a2b81e4be9b458929f682d2383bd7a02f815e5ff80d4",
+      "png_bytes": 343325
+    },
+    {
+      "card": "data-utility",
+      "svg_sha256": "903a73c7dcb5fb2024b00422025c3431826f34a568f020041e03507efbfdd835",
+      "png_bytes": 343148
+    },
+    {
+      "card": "async",
+      "svg_sha256": "a945653f109ea2c27cb8f2df3c42e23b299d503bd51477fa1db6d70bcda38eb1",
+      "png_bytes": 343946
+    },
+    {
+      "card": "declaration-files",
+      "svg_sha256": "d01e59cfc3eb2c64e57d9b0e85b74216aa842e069845428a4b5e5bb3dc65cc6d",
+      "png_bytes": 342548
+    },
+    {
+      "card": "publishing",
+      "svg_sha256": "95d2fb071437126b3ba0ce0b5544d419b17f3583543a158101adabecf798d2a2",
+      "png_bytes": 344229
+    },
+    {
+      "card": "tsconfig",
+      "svg_sha256": "72aab9cdeff8930d2752881a30d0be13e5a441509bf4d32fe9f45960a364a76c",
+      "png_bytes": 341968
+    },
+    {
+      "card": "shipping",
+      "svg_sha256": "6819413322b3d08269039e3a5f63438efc6ad25717987c4abbc3b04582d5c5ba",
+      "png_bytes": 344066
+    },
+    {
+      "card": "any-unknown-never-void",
+      "svg_sha256": "78e60fb32914a1c1e08b18b4e6f9bcc5f08f678e95cafe6399487dbcc576519e",
+      "png_bytes": 348519
+    },
+    {
+      "card": "http-clients",
+      "svg_sha256": "ad9a794875c0d00ffc464dc57d9d9e131b190a16b3fe9bcdc107dfb927c7b7f0",
+      "png_bytes": 345134
+    },
+    {
+      "card": "capstone",
+      "svg_sha256": "65ad06a36386a94497b6b811fe64262c4e27d3a3dfa18524185113899e00d144",
+      "png_bytes": 346487
+    },
+    {
+      "card": "runtime-validation",
+      "svg_sha256": "32367b565c97a6c1fcc1d35131f680d308b536f9171a4c81e65d48b7298dcf32",
+      "png_bytes": 344220
+    },
+    {
+      "card": "generics",
+      "svg_sha256": "90132b055ba2cb44c37b2886340ef7cb2869af40a92341edbf30b953923c9b50",
+      "png_bytes": 345008
+    },
+    {
+      "card": "testing",
+      "svg_sha256": "2f25ac62ce5684c649f8782b9627b2595821dee79b6c39465fc7151f89fbed37",
+      "png_bytes": 342890
+    },
+    {
+      "card": "errors-and-null",
+      "svg_sha256": "336ade330f135e38ea678935d32529a13e89ed1964dcb2d3d3affb611f5e492b",
+      "png_bytes": 342467
+    },
+    {
+      "card": "application",
+      "svg_sha256": "ab79e1f205d151d6b708e984e06e6892e5a806644627e2423458fa4f0e362269",
+      "png_bytes": 347116
+    },
+    {
+      "card": "workspaces",
+      "svg_sha256": "01ee3af51cdd7ceb9f0b826325f0d47821bc021f8019ebd7d432bdd23f4a377f",
+      "png_bytes": 347072
+    },
+    {
+      "card": "template-literal-types",
+      "svg_sha256": "e213d58682e0e3cc4993b30ba547a14c2cda521b0654583ff5440dc263d652e6",
+      "png_bytes": 342307
+    },
+    {
+      "card": "functions",
+      "svg_sha256": "c9fb0c316f56eadd8ccca0e369441f23b83fdd9653f95e3b63c96ef1c0dedc45",
+      "png_bytes": 341763
+    },
+    {
+      "card": "assertions-const-satisfies",
+      "svg_sha256": "d54314b39e2e618d26adf23cfbc4cdb11e0b1307d7ff7921c3da81ba84db97db",
+      "png_bytes": 345093
+    },
+    {
+      "card": "variance",
+      "svg_sha256": "62a8b5370843bdb8f032d9b322773952032eea88ab50552a087ab5dad26f0f5d",
+      "png_bytes": 345265
+    },
+    {
+      "card": "architecture",
+      "svg_sha256": "b067dffd5831054d7385b1a971f4729269a21a8ac7815f24dfca232b0c758d1a",
+      "png_bytes": 346407
+    },
+    {
+      "card": "advanced-design",
+      "svg_sha256": "3ae4e7a936c206862b763831c8b5576421a63673be327c1e10d26762ca8e64ff",
+      "png_bytes": 345718
+    },
+    {
+      "card": "objects-arrays-tuples",
+      "svg_sha256": "c8bda4e926bdc5e3b772e823fd41b4a928a158d2fbdff639a104b3c32ecbc062",
+      "png_bytes": 345235
+    },
+    {
+      "card": "library-cli",
+      "svg_sha256": "b19a1df1be975f069e2ee5f4ec7855e8b4f84d8fb67d69726eb0bedff51df204",
+      "png_bytes": 345276
+    },
+    {
+      "card": "compiler-tooling",
+      "svg_sha256": "901521edf77a4325ea41115f5167dfa68ddb1a0907b3e329dc467d63f068c875",
+      "png_bytes": 346233
+    },
+    {
+      "card": "static-analysis",
+      "svg_sha256": "07a3eb3c62efe2d8aec5332dcd278b5389531d5f073e950499851cc889a44a14",
+      "png_bytes": 344773
+    },
+    {
+      "card": "performance",
+      "svg_sha256": "01c140441a636e23bf6a98edf6074aee9ccc1945fba857ea1ec04472ec28d7b8",
+      "png_bytes": 342676
+    },
+    {
+      "card": "setup",
+      "svg_sha256": "6078ecc0e70d3987fbcbe13f633f8ac53e98e25a8bf9dcf9761a2b77d2d84ba9",
+      "png_bytes": 342147
+    },
+    {
+      "card": "keyof-typeof-indexed-access",
+      "svg_sha256": "d14d7c08784af85bb9f0d6da418b73f16907ed4087b1c12be2d422b6866fe47f",
+      "png_bytes": 344840
+    },
+    {
+      "card": "modules",
+      "svg_sha256": "2091a3c8fde32579d4184f38c282f64abab9956ac47a5c2b2dcde4af74e769c1",
+      "png_bytes": 342623
+    },
+    {
+      "card": "runtime-safety",
+      "svg_sha256": "b081e07b054748fec501b74e6c5c77e27970629407f4659ecb575202489c1c4a",
+      "png_bytes": 344069
+    },
+    {
+      "card": "values-and-types",
+      "svg_sha256": "b79668fccfcd49e9261e61f412493f964c5ff618efadb9a2bfecf5444bcfda16",
+      "png_bytes": 346147
+    },
+    {
+      "card": "javascript-migration",
+      "svg_sha256": "b1d8a25da2166c845aaf58811d4d94670ef076b64dd8728efcb71036ad9fa43b",
+      "png_bytes": 348394
+    },
+    {
+      "card": "structural-typing",
+      "svg_sha256": "3737f2b0d840e55f879cea9165f639ef84c2cb4ee10e41aab8b0b0b6ee963b08",
+      "png_bytes": 347726
+    },
+    {
+      "card": "conditional-types",
+      "svg_sha256": "bf023105faa011748e9122e36319b25774f2760ce1df1ac3bc59995dce20ad4d",
+      "png_bytes": 342019
+    },
+    {
+      "card": "library-design",
+      "svg_sha256": "fb47053e22f7e299ebdcd9e97ec8b3b33c3a466fd507cd5f99b16d552ed06645",
+      "png_bytes": 343423
+    },
+    {
+      "card": "node-application",
+      "svg_sha256": "b3a0078553bfa48f30022c9005252f4fc6261ad14c25c3ce924d5301f50a81d0",
+      "png_bytes": 345200
+    }
+  ],
+  "deterministic_svg": true,
+  "size": "1200x630",
+  "title_and_bounds": "all titles matched; no SVG text overflow",
+  "rasterizer": "Playwright installed Chrome; embedded Departure Mono and Inter"
+}

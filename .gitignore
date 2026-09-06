@@ -9,3 +9,5 @@ test-results/
 playwright-report/
 .DS_Store
 labs/*/dist/
+# Python audit-tool bytecode.
+__pycache__/
