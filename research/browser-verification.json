@@ -33,6 +33,7 @@
   "search": "passed",
   "progress": "passed",
   "mobile": "passed",
+  "mobileMenu": "passed: 320/390/760px, focus trap, Escape, close, navigation, resize, no-JS",
   "dom": "passed",
   "noJavaScript": "passed",
   "blockedStorage": "passed",

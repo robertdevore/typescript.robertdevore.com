@@ -128,10 +128,62 @@ try {
   }
   await page.goto(base + "/");
   await page.screenshot({ path: ".work/screenshots/home-mobile.png", fullPage: true });
+  for (const width of [320, 390, 760]) {
+    await page.setViewportSize({ width, height: 844 });
+    await page.goto(base + "/lessons/performance/");
+    const toggle = page.getByRole("button", { name: "Open site menu" });
+    await expect(toggle).toBeVisible();
+    const searchBox = await page.locator(".search-link").boundingBox();
+    const menuBox = await toggle.boundingBox();
+    assert.ok(menuBox.x >= searchBox.x + searchBox.width, "Menu sits right of search");
+    await toggle.click();
+    const menu = page.getByRole("dialog", { name: "Explore the course" });
+    await expect(menu).toBeVisible();
+    await expect(toggle).toHaveAttribute("aria-expanded", "true");
+    await expect(page.getByRole("button", { name: "Close site menu" })).toBeFocused();
+    const bounds = await menu.boundingBox();
+    assert.equal(bounds.width, width);
+    assert.equal(bounds.height, 844);
+    assert.equal(
+      await page.evaluate(() => document.documentElement.scrollWidth > innerWidth),
+      false,
+    );
+    assert.deepEqual(
+      (await new AxeBuilder({ page }).withTags(["wcag2a", "wcag2aa"]).analyze()).violations.map(
+        (v) => v.id,
+      ),
+      [],
+    );
+    await page.keyboard.press("Shift+Tab");
+    await expect(menu.getByRole("link", { name: "Search", exact: true })).toBeFocused();
+    await page.keyboard.press("Tab");
+    await expect(page.getByRole("button", { name: "Close site menu" })).toBeFocused();
+    if (width === 390) await page.screenshot({ path: ".work/screenshots/menu-mobile.png" });
+    await page.keyboard.press("Escape");
+    await expect(menu).not.toBeVisible();
+    await expect(toggle).toBeFocused();
+    await expect(toggle).toHaveAttribute("aria-expanded", "false");
+    await toggle.click();
+    await page.getByRole("button", { name: "Close site menu" }).click();
+    await expect(menu).not.toBeVisible();
+    await toggle.click();
+    await menu.getByRole("link", { name: "Reference", exact: true }).click();
+    await expect(page).toHaveURL(base + "/reference/");
+    await expect(page.locator("#site-menu")).not.toBeVisible();
+  }
+  await page.getByRole("button", { name: "Open site menu" }).click();
+  await page.setViewportSize({ width: 1100, height: 900 });
+  await expect(page.locator("#site-menu")).not.toBeVisible();
+  await expect(page.locator(".desktop-nav")).toBeVisible();
   const nojs = await browser.newContext({ javaScriptEnabled: false });
   const staticPage = await nojs.newPage();
   await staticPage.goto(base + "/course/");
   await expect(staticPage.locator(".lesson-list a")).toHaveCount(41);
+  await staticPage.setViewportSize({ width: 320, height: 844 });
+  await expect(staticPage.locator(".desktop-nav")).toBeVisible();
+  await expect(staticPage.locator(".menu-toggle")).not.toBeVisible();
+  await staticPage.locator(".desktop-nav").getByRole("link", { name: "About" }).click();
+  await expect(staticPage).toHaveURL(base + "/about/");
   await nojs.close();
   const blocked = await browser.newContext();
   await blocked.addInitScript(() => {
@@ -156,6 +208,7 @@ try {
         search: "passed",
         progress: "passed",
         mobile: "passed",
+        mobileMenu: "passed: 320/390/760px, focus trap, Escape, close, navigation, resize, no-JS",
         dom: "passed",
         noJavaScript: "passed",
         blockedStorage: "passed",

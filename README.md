@@ -41,7 +41,7 @@ The SSG is a small Node build using markdown-it and build-time highlight.js. It 
 
 Content lives in `content/lessons` and `content/builds`. The first line is a JSON metadata object; remaining content is Markdown. Keep first-line metadata on one line. Lesson placeholders load actual compiler-verified examples and diagnostic output. `scripts/content.mjs` owns ordering and stage metadata; `scripts/build.mjs` owns routes and rendering.
 
-Headings, labels, tags, and decorative text use self-hosted Departure Mono. Body text uses self-hosted Inter. Font licenses are included under assets/fonts. Source and course content use the repository MIT license.
+Headings, labels, tags, and decorative text use self-hosted Departure Mono. Body text uses self-hosted Inter. Font licenses are included under assets/fonts. All UI icons use the vendored Tabler SVGs in assets/tabler; their MIT license and upstream revision are included. The build emits one local icon sprite. The mobile menu uses a native modal dialog; without JavaScript, the header keeps its navigation links visible. Source and course content use the repository MIT license.
 
 ## Learning labs
 

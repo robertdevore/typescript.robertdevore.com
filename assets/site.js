@@ -1,3 +1,4 @@
+import { icon } from "./icons.js";
 const allIds = JSON.parse(document.body.dataset.courseIds || "[]");
 const key = "typescript-course-progress-v1";
 let completed = new Set();
@@ -14,13 +15,13 @@ function updateProgress() {
     const done = completed.has(link.dataset.progressId);
     link.classList.toggle("done", done);
     const indicator = link.querySelector(".check");
-    if (indicator) indicator.textContent = done ? "✓" : "□";
+    if (indicator) indicator.innerHTML = icon(done ? "square-check" : "square");
     link.setAttribute("aria-label", `${link.textContent.trim()}${done ? ", completed" : ""}`);
   });
   document.querySelectorAll("[data-complete]").forEach((button) => {
     button.hidden = false;
     const done = completed.has(button.dataset.complete);
-    button.textContent = done ? "✓ Completed — mark incomplete" : "Mark complete";
+    button.innerHTML = `${icon(done ? "square-check" : "square")}<span>${done ? "Completed — mark incomplete" : "Mark complete"}</span>`;
     button.setAttribute("aria-pressed", String(done));
   });
   document.querySelectorAll(".progress-box").forEach((box) => (box.hidden = false));
@@ -43,7 +44,7 @@ function updateProgress() {
   const resume = document.querySelector("[data-resume]");
   if (resume && completed.size && next) {
     resume.href = `/${["data-utility", "library-cli", "application", "package-consumer", "capstone"].includes(next) ? "builds" : "lessons"}/${next}/`;
-    resume.textContent = "Continue learning ↗";
+    resume.innerHTML = `Continue learning ${icon("arrow-up-right")}`;
   }
 }
 function saveProgress() {
@@ -85,11 +86,11 @@ document.querySelectorAll(".copy").forEach((button) =>
       await navigator.clipboard.writeText(
         button.closest("figure").querySelector("code").textContent,
       );
-      button.textContent = "Copied";
+      button.querySelector(".copy-label").textContent = "Copied";
     } catch {
-      button.textContent = "Select code to copy";
+      button.querySelector(".copy-label").textContent = "Select code to copy";
     }
-    setTimeout(() => (button.textContent = "Copy"), 2500);
+    setTimeout(() => (button.querySelector(".copy-label").textContent = "Copy"), 2500);
   }),
 );
 document.addEventListener("keydown", (event) => {
@@ -196,4 +197,39 @@ if (input) {
     search();
   });
   search();
+}
+
+const menu = document.querySelector("#site-menu");
+const menuToggle = document.querySelector(".menu-toggle");
+if (menu && menuToggle && typeof menu.showModal === "function") {
+  document.documentElement.classList.add("menu-ready");
+  menuToggle.hidden = false;
+  menuToggle.addEventListener("click", () => {
+    menu.showModal();
+    menuToggle.setAttribute("aria-expanded", "true");
+    document.documentElement.classList.add("menu-open");
+  });
+  menu.querySelector(".menu-close").addEventListener("click", () => menu.close());
+  menu.addEventListener("keydown", (event) => {
+    if (event.key !== "Tab") return;
+    const controls = [...menu.querySelectorAll("button,a[href]")];
+    const first = controls[0],
+      last = controls.at(-1);
+    if (event.shiftKey && document.activeElement === first) {
+      event.preventDefault();
+      last.focus();
+    } else if (!event.shiftKey && document.activeElement === last) {
+      event.preventDefault();
+      first.focus();
+    }
+  });
+  menu.addEventListener("close", () => {
+    menuToggle.setAttribute("aria-expanded", "false");
+    document.documentElement.classList.remove("menu-open");
+    if (matchMedia("(max-width: 760px)").matches) menuToggle.focus();
+  });
+  menu.querySelectorAll("a").forEach((link) => link.addEventListener("click", () => menu.close()));
+  matchMedia("(min-width: 761px)").addEventListener("change", (event) => {
+    if (event.matches && menu.open) menu.close();
+  });
 }

@@ -1,8 +1,9 @@
-import { mkdir, readFile, writeFile, rm, cp } from "node:fs/promises";
+import { mkdir, readFile, writeFile, rm, cp, readdir } from "node:fs/promises";
 import MarkdownIt from "markdown-it";
 import hljs from "highlight.js";
 import { build } from "esbuild";
 import { readCollection, stages, origin, escape as e } from "./content.mjs";
+import { icon } from "../assets/icons.js";
 const lessons = await readCollection("lessons");
 const builds = await readCollection("builds");
 const sequence = stages.flatMap((_, i) => [
@@ -22,7 +23,7 @@ md.renderer.rules.fence = (tokens, idx) => {
   const code = hljs.getLanguage(lang)
     ? hljs.highlight(token.content, { language: lang }).value
     : e(token.content);
-  return `<figure class="code ${token.content.includes("error TS") ? "diagnostic" : ""}"><figcaption>${e(lang === "ts" ? "TypeScript" : lang)}<button type="button" class="copy" aria-label="Copy ${e(lang)} code">Copy</button></figcaption><pre tabindex="0"><code class="language-${e(lang)}">${code}</code></pre></figure>`;
+  return `<figure class="code ${token.content.includes("error TS") ? "diagnostic" : ""}"><figcaption>${e(lang === "ts" ? "TypeScript" : lang)}<button type="button" class="copy" aria-label="Copy ${e(lang)} code">${icon("copy")}<span class="copy-label" aria-live="polite">Copy</span></button></figcaption><pre tabindex="0"><code class="language-${e(lang)}">${code}</code></pre></figure>`;
 };
 function render(text) {
   const tokens = md.parse(text, {});
@@ -45,10 +46,19 @@ function render(text) {
   return { html: md.renderer.render(tokens, md.options, {}), toc };
 }
 function nav(active) {
-  return `<a class="skip" href="#main">Skip to content</a><header class="top"><a class="brand" href="/"><span class="logo" aria-hidden="true">TS</span><span>TypeScript<span class="brand-small"> / THE COURSE</span></span></a><nav aria-label="Main"><a href="/course/" ${active === "course" ? 'aria-current="page"' : ""}>Course</a><a href="/reference/">Reference</a><a href="/about/">About</a></nav><a class="search-link" href="/search/">Search <kbd>/</kbd></a></header>`;
+  const links = [
+    ["/course/", "Course"],
+    ["/reference/", "Reference"],
+    ["/about/", "About"],
+    ["/tracks/", "Specialization tracks"],
+    ["/research/", "Sources & versions"],
+  ];
+  const link = ([url, label]) =>
+    `<a href="${url}" ${active === "course" && url === "/course/" ? 'aria-current="page"' : ""}>${label}</a>`;
+  return `<a class="skip" href="#main">Skip to content</a><header class="top"><a class="brand" href="/"><span class="logo">${icon("brand-typescript")}</span><span>TypeScript<span class="brand-small"> / THE COURSE</span></span></a><nav class="desktop-nav" aria-label="Main">${links.slice(0, 3).map(link).join("")}</nav><a class="search-link" href="/search/" aria-label="Search the course (slash shortcut)">${icon("search")}<span>Search</span><kbd aria-hidden="true">${icon("slash")}</kbd></a><button class="menu-toggle" type="button" aria-label="Open site menu" aria-controls="site-menu" aria-expanded="false" hidden>${icon("menu-2")}</button></header><dialog id="site-menu" aria-labelledby="menu-title"><div class="menu-heading"><p id="menu-title" class="eyebrow">EXPLORE THE COURSE</p><button class="menu-close" type="button" aria-label="Close site menu" autofocus>${icon("x")}</button></div><nav aria-label="Site menu"><a href="/">Home ${icon("arrow-up-right")}</a>${links.map(([url, label]) => `<a href="${url}">${label}${icon("arrow-up-right")}</a>`).join("")}<a href="/search/">Search ${icon("search")}</a></nav><p class="menu-note">Learn at your pace. Pick up where you left off.</p></dialog>`;
 }
 function layout(title, description, path, body, active = "", noindex = false) {
-  return `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>${e(title)} · TypeScript Course</title><meta name="description" content="${e(description)}"><link rel="canonical" href="${origin}${path}"><meta property="og:type" content="website"><meta property="og:title" content="${e(title)} · TypeScript Course"><meta property="og:description" content="${e(description)}"><meta property="og:url" content="${origin}${path}"><meta property="og:image" content="${origin}/assets/social.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="TypeScript Course: JavaScript underneath. Types above it. Build real systems."><meta name="twitter:card" content="summary_large_image">${noindex ? '<meta name="robots" content="noindex,follow">' : ""}<meta name="theme-color" content="#f7f8f6"><link rel="icon" href="/assets/favicon.svg" type="image/svg+xml"><link rel="preload" href="/assets/fonts/DepartureMono-Regular.woff2" as="font" type="font/woff2" crossorigin><link rel="stylesheet" href="/assets/site.css"><script src="/assets/site.js" defer></script></head><body data-course-ids="${e(JSON.stringify(ids))}">${nav(active)}${body}<footer><a class="brand" href="/">TypeScript / The course</a><p>JavaScript underneath. Types above it. Runtime evidence between them.</p><div><a href="/course/">Learning path</a><a href="/research/">Sources & currency</a><a href="/sitemap.xml">Sitemap</a><a href="https://robertdevore.com">Robert DeVore</a><a href="https://github.com/robertdevore/typescript.robertdevore.com">Source code</a></div><small>Independent educational course. No affiliation with or endorsement by Microsoft or the named reference contributors.</small></footer></body></html>`;
+  return `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>${e(title)} · TypeScript Course</title><meta name="description" content="${e(description)}"><link rel="canonical" href="${origin}${path}"><meta property="og:type" content="website"><meta property="og:title" content="${e(title)} · TypeScript Course"><meta property="og:description" content="${e(description)}"><meta property="og:url" content="${origin}${path}"><meta property="og:image" content="${origin}/assets/social.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="TypeScript Course: Learn TypeScript. Build apps and libraries."><meta name="twitter:card" content="summary_large_image">${noindex ? '<meta name="robots" content="noindex,follow">' : ""}<meta name="theme-color" content="#f7f8f6"><link rel="icon" href="/assets/favicon.svg" type="image/svg+xml"><link rel="preload" href="/assets/fonts/DepartureMono-Regular.woff2" as="font" type="font/woff2" crossorigin><link rel="stylesheet" href="/assets/site.css"><script src="/assets/site.js" defer></script></head><body data-course-ids="${e(JSON.stringify(ids))}">${nav(active)}${body}<footer><a class="brand" href="/">TypeScript / The course</a><p>Understand JavaScript. Use TypeScript. Check what runs.</p><div><a href="/course/">Learning path</a><a href="/research/">Sources & versions</a><a href="/sitemap.xml">Sitemap</a><a href="https://robertdevore.com">Robert DeVore</a><a href="https://github.com/robertdevore/typescript.robertdevore.com">Source code</a></div><small>Independent educational course. No affiliation with or endorsement by Microsoft or the named reference contributors.</small></footer></body></html>`;
 }
 async function page(path, title, description, body, active, noindex) {
   const directory = `dist${path}`;
@@ -59,13 +69,13 @@ async function page(path, title, description, body, active, noindex) {
   );
 }
 function lessonLink(l, current) {
-  return `<a href="${l.url}" data-progress-id="${l.slug}" ${current === l.slug ? 'aria-current="page"' : ""}><span class="check" aria-hidden="true">□</span><span class="number">${l.number ? String(l.number).padStart(2, "0") : "◆"}</span><span>${e(l.title)}</span></a>`;
+  return `<a href="${l.url}" data-progress-id="${l.slug}" ${current === l.slug ? 'aria-current="page"' : ""}><span class="check" aria-hidden="true">${icon("square")}</span><span class="number">${l.number ? String(l.number).padStart(2, "0") : icon("diamond")}</span><span>${e(l.title)}</span></a>`;
 }
 function pathCards() {
   return stages
     .map(
       (s, i) =>
-        `<article class="stage-card"><p class="eyebrow">STAGE 0${i + 1} <span>LESSONS ${s.range}</span></p><h3><a href="/course/#stage-${i + 1}">${e(s.title)}</a></h3><p>${e(s.description)}</p><a class="text-link" href="${lessons.find((l) => l.stage === i + 1).url}">Start stage <span aria-hidden="true">↗</span></a></article>`,
+        `<article class="stage-card"><p class="eyebrow">STAGE 0${i + 1} <span>LESSONS ${s.range}</span></p><h3><a href="/course/#stage-${i + 1}">${e(s.title)}</a></h3><p>${e(s.description)}</p><a class="text-link" href="${lessons.find((l) => l.stage === i + 1).url}">Start stage ${icon("arrow-up-right")}</a></article>`,
     )
     .join("");
 }
@@ -83,10 +93,24 @@ function curriculum() {
 await rm("dist", { recursive: true, force: true });
 await mkdir("dist/assets", { recursive: true });
 await cp("assets", "dist/assets", { recursive: true });
+const symbols = await Promise.all(
+  (await readdir("assets/tabler"))
+    .filter((name) => name.endsWith(".svg"))
+    .map(async (name) => {
+      const source = await readFile(`assets/tabler/${name}`, "utf8");
+      const svg = source.match(/<svg([\s\S]*?)>([\s\S]*?)<\/svg>/);
+      return `<symbol id="${name.slice(0, -4)}"${svg[1].replace(/\s(?:xmlns|width|height)="[^"]*"/g, "")}>${svg[2]}</symbol>`;
+    }),
+);
+await writeFile(
+  "dist/assets/icons.svg",
+  `<svg xmlns="http://www.w3.org/2000/svg">${symbols.join("")}</svg>`,
+);
+await cp("assets/tabler/brand-typescript.svg", "dist/assets/favicon.svg");
 await build({
   entryPoints: ["assets/site.js"],
   outfile: "dist/assets/site.js",
-  bundle: false,
+  bundle: true,
   minify: true,
   target: "es2022",
 });
@@ -102,15 +126,15 @@ const heroSource = await readFile("labs/hero.ts", "utf8");
 const heroCode = md.render("```ts\n" + heroSource + "```\n");
 await page(
   "/",
-  "Learn TypeScript. Build real systems.",
+  "Learn TypeScript. Build apps and libraries.",
   "A free, self-guided TypeScript course: 36 lessons, five builds, verified examples, and a production capstone. JavaScript underneath. Types above it.",
-  `<main id="main"><section class="hero"><div><p class="eyebrow"><span class="dot"></span> FREE COURSE / TYPESCRIPT 7</p><h1>JavaScript underneath.<br><span>TypeScript<br>within reach.</span></h1><p class="lead">Go from your first inferred type to systems you can confidently build, test, package, and maintain. One practical lesson at a time.</p><div class="actions"><a class="button" href="/lessons/setup/" data-resume>Start learning <span aria-hidden="true">↗</span></a><a class="text-link" href="/course/">Explore the curriculum →</a></div><p class="hero-note">No account. No paywall. Just you, the code, and the compiler.</p></div><div class="hero-visual"><div class="window-bar"><span>● ● ●</span><span>your-next-step.ts</span><span>TS</span></div>${heroCode}<div class="type-note"><span class="eyebrow">THE LEARNING LOOP</span><p>Predict the type.<br>Check the code.<br>Run the JavaScript.</p><span class="verified">✓ COMPILER + RUNTIME VERIFIED</span></div></div></section><section class="stats" aria-label="Course at a glance"><div><strong>36</strong><span>SUBSTANTIAL LESSONS</span></div><div><strong>05</strong><span>STAGES, ONE CLEAR PATH</span></div><div><strong>72</strong><span>WORKING + CHECKER DRILLS</span></div><div><strong>01</strong><span>PRODUCTION CAPSTONE</span></div></section><section class="section"><div class="section-intro"><div><p class="eyebrow">YOUR LEARNING PATH</p><h2>From first types<br>to better systems.</h2></div><p>Learn the runtime behind the syntax. Build a useful mental model. Then put it to work in software that crosses real boundaries.</p></div><div class="stage-grid">${pathCards()}</div></section><section class="principles section"><p class="eyebrow">THE COURSE PHILOSOPHY</p><h2>Types make promises.<br>Runtime evidence keeps them.</h2><div class="boundary" aria-label="External data flows to unknown, then parsing, then a trusted application type"><span>EXTERNAL DATA</span><b aria-hidden="true">→</b><span>UNKNOWN</span><b aria-hidden="true">→</b><span>PARSE + VALIDATE</span><b aria-hidden="true">→</b><span>TRUSTED TYPE</span></div><p>Use inference instead of annotation noise. Model valid states instead of casting around errors. Learn when simple types are the strongest design.</p><a class="text-link" href="/lessons/runtime-validation/">Explore runtime boundaries →</a></section><section class="section capstone-promo"><div><p class="eyebrow">BUILD SOMETHING THAT HOLDS TOGETHER</p><h2>Your final project:<br>a typed job platform.</h2><p>A CLI, HTTP API, async executor, persistence, cancellation, and a reusable package. Build it in milestones and prove its contracts.</p><a class="button" href="/builds/capstone/">See the capstone ↗</a></div><ul><li>01 / Model the domain</li><li>02 / Validate the boundaries</li><li>03 / Own async execution</li><li>04 / Package & test</li><li>05 / Ship & maintain</li></ul></section></main>`,
+  `<main id="main"><section class="hero"><div><p class="eyebrow">${icon("circle-filled")} FREE COURSE / TYPESCRIPT 7</p><h1>Learn TypeScript.<br><span>Build apps<br>and libraries.</span></h1><p class="lead">Learn how JavaScript runs and how TypeScript checks your code. Then build, test, and package software you can maintain.</p><div class="actions"><a class="button" href="/lessons/setup/" data-resume>Start learning ${icon("arrow-up-right")}</a><a class="text-link" href="/course/">View all lessons ${icon("arrow-right")}</a></div><p class="hero-note">Free to read. No account needed.</p></div><div class="hero-visual"><div class="window-bar"><span class="window-dots">${icon("circle-filled")}${icon("circle-filled")}${icon("circle-filled")}</span><span>your-next-step.ts</span><span>TS</span></div>${heroCode}<div class="type-note"><span class="eyebrow">THE LEARNING LOOP</span><p>Predict the type.<br>Check the code.<br>Run the JavaScript.</p><span class="verified">${icon("check")} CHECKED AND RUN</span></div></div></section><section class="stats" aria-label="Course at a glance"><div><strong>36</strong><span>LESSONS WITH EXERCISES</span></div><div><strong>05</strong><span>STAGES</span></div><div><strong>72</strong><span>CODE EXAMPLES & DRILLS</span></div><div><strong>01</strong><span>PRODUCTION CAPSTONE</span></div></section><section class="section"><div class="section-intro"><div><p class="eyebrow">YOUR LEARNING PATH</p><h2>Start with the basics.<br>Build at every stage.</h2></div><p>Write your first program, learn the type system, then build applications and libraries. Each stage ends with a project.</p></div><div class="stage-grid">${pathCards()}</div></section><section class="principles section"><p class="eyebrow">TYPES AND RUNTIME</p><h2>Types check your code.<br>Validation checks your data.</h2><div class="boundary" aria-label="External data flows to unknown, then parsing, then a trusted application type"><span>EXTERNAL DATA</span>${icon("arrow-right")}<span>UNKNOWN</span>${icon("arrow-right")}<span>PARSE + VALIDATE</span>${icon("arrow-right")}<span>TRUSTED TYPE</span></div><p>Let TypeScript infer what it can. Use unions to describe valid states, and validate external data before you trust it.</p><a class="text-link" href="/lessons/runtime-validation/">Learn runtime validation ${icon("arrow-right")}</a></section><section class="section capstone-promo"><div><p class="eyebrow">THE FINAL PROJECT</p><h2>Build a job<br>execution platform.</h2><p>A CLI, HTTP API, async executor, persistence, cancellation, and a reusable package. Build it in stages and test each part.</p><a class="button" href="/builds/capstone/">View the project ${icon("arrow-up-right")}</a></div><ul><li>01 / Model the domain</li><li>02 / Validate the boundaries</li><li>03 / Manage async execution</li><li>04 / Package & test</li><li>05 / Ship & maintain</li></ul></section></main>`,
 );
 await page(
   "/course/",
   "The complete learning path",
   "All 36 TypeScript lessons and five milestone builds in order, with local progress and clear checkpoints.",
-  `<main id="main" class="wide"><div class="page-intro"><p class="eyebrow">THE COMPLETE COURSE</p><h1>One path.<br>Every layer.</h1><p class="lead">Start at the beginning or return to the concept you need. Complete each build before moving to the next stage.</p><div class="progress-box" hidden><label for="overall">Your progress <span data-progress-text></span></label><progress id="overall" max="41" value="0"></progress><button class="plain" data-reset>Reset progress</button><p class="storage-note" role="status"></p></div></div>${curriculum()}</main>`,
+  `<main id="main" class="wide"><div class="page-intro"><p class="eyebrow">THE COMPLETE COURSE</p><h1>Your TypeScript<br>learning path.</h1><p class="lead">Start at the beginning or return to the concept you need. Complete each build before moving to the next stage.</p><div class="progress-box" hidden><label for="overall">Your progress <span data-progress-text></span></label><progress id="overall" max="41" value="0"></progress><button class="plain" data-reset>Reset progress</button><p class="storage-note" role="status"></p></div></div>${curriculum()}</main>`,
   "course",
 );
 const search = [];
@@ -145,15 +169,15 @@ for (const lesson of sequence) {
   const rendered = render(body);
   rendered.html = rendered.html.replace(
     "<p>{{explorer}}</p>",
-    `<details class="explorer"><summary>Inspect compiler-emitted types</summary>${lesson.explorer || ""}</details>`,
+    `<details class="explorer"><summary>${icon("chevron-right")}Inspect compiler-emitted types</summary>${lesson.explorer || ""}</details>`,
   );
   const index = sequence.indexOf(lesson),
     previous = sequence[index - 1],
     next = sequence[index + 1];
-  const sidebar = `<aside class="course-nav"><details open><summary>Course navigation</summary><nav aria-label="Course">${stages
+  const sidebar = `<aside class="course-nav"><details open><summary>${icon("chevron-right")}Course navigation</summary><nav aria-label="Course">${stages
     .map(
       (s, i) =>
-        `<details ${lesson.stage === i + 1 ? "open" : ""}><summary>0${i + 1} / ${e(s.title)}</summary>${sequence
+        `<details ${lesson.stage === i + 1 ? "open" : ""}><summary>${icon("chevron-right")}0${i + 1} / ${e(s.title)}</summary>${sequence
           .filter((l) => l.stage === i + 1)
           .map((l) => lessonLink(l, lesson.slug))
           .join("")}</details>`,
@@ -164,7 +188,7 @@ for (const lesson of sequence) {
     lesson.url,
     lesson.title,
     lesson.description,
-    `<div class="lesson-layout">${sidebar}<main id="main" class="lesson" data-lesson="${lesson.slug}"><header class="lesson-header"><a class="eyebrow" href="/course/#stage-${lesson.stage}">STAGE 0${lesson.stage} / ${e(stages[lesson.stage - 1].title.toUpperCase())}</a><p class="lesson-number">${lesson.number ? `LESSON ${String(lesson.number).padStart(2, "0")} OF 36` : "STAGE BUILD"} · ${Math.max(20, Math.ceil(body.split(/\s+/).length / 180) + 20)} MIN + PRACTICE</p><h1>${e(lesson.title)}</h1><p class="lead">${e(lesson.description)}</p><p class="verified">${lesson.number ? "✓ EXAMPLES CHECKED WITH TYPESCRIPT 7.0.2 / NODE 24" : "◆ IMPLEMENT / TEST / REVIEW"}</p></header><article class="prose">${rendered.html}</article><section class="completion"><button type="button" data-complete="${lesson.slug}" aria-pressed="false" hidden>Mark complete</button><p class="storage-note" role="status"></p><p>Check off this ${lesson.number ? "lesson" : "build"} when you can meet its checkpoint. Progress stays in this browser.</p></section><nav class="previous-next" aria-label="Lesson pagination">${previous ? `<a href="${previous.url}"><small>← PREVIOUS</small>${e(previous.title)}</a>` : "<span></span>"}${next ? `<a href="${next.url}"><small>NEXT →</small>${e(next.title)}</a>` : '<a href="/tracks/"><small>CONTINUE →</small>Specialization tracks</a>'}</nav></main>${toc}</div>`,
+    `<div class="lesson-layout">${sidebar}<main id="main" class="lesson" data-lesson="${lesson.slug}"><header class="lesson-header"><a class="eyebrow" href="/course/#stage-${lesson.stage}">STAGE 0${lesson.stage} / ${e(stages[lesson.stage - 1].title.toUpperCase())}</a><p class="lesson-number">${lesson.number ? `LESSON ${String(lesson.number).padStart(2, "0")} OF 36` : "STAGE BUILD"} · ${Math.max(20, Math.ceil(body.split(/\s+/).length / 180) + 20)} MIN + PRACTICE</p><h1>${e(lesson.title)}</h1><p class="lead">${e(lesson.description)}</p><p class="verified">${lesson.number ? `${icon("check")} EXAMPLES CHECKED WITH TYPESCRIPT 7.0.2 / NODE 24` : `${icon("diamond")} BUILD / TEST / REVIEW`}</p></header><article class="prose">${rendered.html}</article><section class="completion"><button type="button" data-complete="${lesson.slug}" aria-pressed="false" hidden>Mark complete</button><p class="storage-note" role="status"></p><p>Check off this ${lesson.number ? "lesson" : "build"} when you can meet its checkpoint. Progress stays in this browser.</p></section><nav class="previous-next" aria-label="Lesson pagination">${previous ? `<a href="${previous.url}"><small>${icon("arrow-left")} PREVIOUS</small>${e(previous.title)}</a>` : "<span></span>"}${next ? `<a href="${next.url}"><small>NEXT ${icon("arrow-right")}</small>${e(next.title)}</a>` : `<a href="/tracks/"><small>CONTINUE ${icon("arrow-right")}</small>Specialization tracks</a>`}</nav></main>${toc}</div>`,
     "course",
   );
   search.push({
@@ -188,7 +212,7 @@ for (const [slug, title, description] of [
   ],
   [
     "research",
-    "Sources & technical currency",
+    "Sources & versions",
     "The course's verified TypeScript baseline, evidence ledger, and release status.",
   ],
   [
@@ -209,7 +233,7 @@ await page(
   "/search/",
   "Search the course",
   "Search TypeScript concepts, compiler errors, and practical reference topics.",
-  `<main id="main" class="reading-page"><p class="eyebrow">FIND YOUR NEXT ANSWER</p><h1>Search the course.</h1><form role="search" action="/search/"><label for="search">Concept, keyword, or compiler error</label><input id="search" name="q" type="search" placeholder="unknown vs any, NodeNext, TS2345…" autocomplete="off"><button type="submit" class="button">Search</button></form><p id="search-status" role="status">Search all lessons and builds. Try “satisfies” or “package exports”.</p><div id="search-results"></div><noscript><p>Interactive search requires JavaScript. Use the <a href="/reference/">reference index</a> or <a href="/course/">full curriculum</a> to find every topic.</p></noscript></main>`,
+  `<main id="main" class="reading-page"><p class="eyebrow">SEARCH</p><h1>Search the course.</h1><form role="search" action="/search/"><label for="search">Concept, keyword, or compiler error</label><input id="search" name="q" type="search" placeholder="unknown vs any, NodeNext, TS2345…" autocomplete="off"><button type="submit" class="button">Search</button></form><p id="search-status" role="status">Search all lessons and builds. Try “satisfies” or “package exports”.</p><div id="search-results"></div><noscript><p>Interactive search requires JavaScript. Use the <a href="/reference/">reference index</a> or <a href="/course/">full curriculum</a> to find every topic.</p></noscript></main>`,
   "",
   true,
 );
@@ -220,7 +244,7 @@ await writeFile(
     "Page not found",
     "Return to the TypeScript course learning path.",
     "/404/",
-    '<main id="main" class="reading-page"><p class="eyebrow">404 / PAGE NOT FOUND</p><h1>This path ends here.</h1><p>Find your way back to the <a href="/course/">complete learning path</a> or <a href="/search/">search the course</a>.</p></main>',
+    '<main id="main" class="reading-page"><p class="eyebrow">404 / PAGE NOT FOUND</p><h1>Page not found.</h1><p>Browse the <a href="/course/">complete learning path</a> or <a href="/search/">search the course</a>.</p></main>',
     "",
     true,
   ),
