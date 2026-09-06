@@ -3,7 +3,7 @@ import globals from "globals";
 export default [
   js.configs.recommended,
   {
-    files: ["scripts/browser.mjs", "scripts/social.mjs"],
+    files: ["scripts/browser.mjs", "scripts/social.mjs", "scripts/howl-cards.mjs"],
     languageOptions: { globals: globals.browser },
   },
   { files: ["scripts/**/*.mjs", "tests/**/*.mjs"], languageOptions: { globals: globals.node } },

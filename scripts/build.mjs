@@ -58,7 +58,79 @@ function nav(active) {
   return `<a class="skip" href="#main">Skip to content</a><header class="top"><a class="brand" href="/"><span class="logo">${icon("brand-typescript")}</span><span>TypeScript<span class="brand-small"> / THE COURSE</span></span></a><nav class="desktop-nav" aria-label="Main">${links.slice(0, 3).map(link).join("")}</nav><a class="search-link" href="/search/" aria-label="Search the course (slash shortcut)">${icon("search")}<span>Search</span><kbd aria-hidden="true">${icon("slash")}</kbd></a><button class="menu-toggle" type="button" aria-label="Open site menu" aria-controls="site-menu" aria-expanded="false" hidden>${icon("menu-2")}</button></header><dialog id="site-menu" aria-labelledby="menu-title"><div class="menu-heading"><p id="menu-title" class="eyebrow">EXPLORE THE COURSE</p><button class="menu-close" type="button" aria-label="Close site menu" autofocus>${icon("x")}</button></div><nav aria-label="Site menu"><a href="/">Home ${icon("arrow-up-right")}</a>${links.map(([url, label]) => `<a href="${url}">${label}${icon("arrow-up-right")}</a>`).join("")}<a href="/search/">Search ${icon("search")}</a></nav><p class="menu-note">Learn at your pace. Pick up where you left off.</p></dialog>`;
 }
 function layout(title, description, path, body, active = "", noindex = false) {
-  return `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>${e(title)} · TypeScript Course</title><meta name="description" content="${e(description)}"><link rel="canonical" href="${origin}${path}"><meta property="og:type" content="website"><meta property="og:title" content="${e(title)} · TypeScript Course"><meta property="og:description" content="${e(description)}"><meta property="og:url" content="${origin}${path}"><meta property="og:image" content="${origin}/assets/social.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="TypeScript Course: Learn TypeScript. Build apps and libraries."><meta name="twitter:card" content="summary_large_image">${noindex ? '<meta name="robots" content="noindex,follow">' : ""}<meta name="theme-color" content="#f7f8f6"><link rel="icon" href="/assets/favicon.svg" type="image/svg+xml"><link rel="preload" href="/assets/fonts/DepartureMono-Regular.woff2" as="font" type="font/woff2" crossorigin><link rel="stylesheet" href="/assets/site.css"><script src="/assets/site.js" defer></script></head><body data-course-ids="${e(JSON.stringify(ids))}">${nav(active)}${body}<footer><a class="brand" href="/">TypeScript / The course</a><p>Understand JavaScript. Use TypeScript. Check what runs.</p><div><a href="/course/">Learning path</a><a href="/research/">Sources & versions</a><a href="/sitemap.xml">Sitemap</a><a href="https://robertdevore.com">Robert DeVore</a><a href="https://github.com/robertdevore/typescript.robertdevore.com">Source code</a></div><small>Independent educational course. No affiliation with or endorsement by Microsoft or the named reference contributors.</small></footer></body></html>`;
+  const lesson = sequence.find((item) => item.url === path);
+  const socialImage = lesson
+    ? `${origin}/assets/og/${lesson.slug}.png`
+    : `${origin}/assets/social.png`;
+  const socialAlt = lesson
+    ? `${lesson.title} — TypeScript Course`
+    : "TypeScript Course: Learn TypeScript. Build apps and libraries.";
+  const crumbs = [
+    { name: "Home", url: "/" },
+    ...(lesson ? [{ name: "Course", url: "/course/" }] : []),
+    { name: title, url: path },
+  ];
+  if (path !== "/" && !noindex) {
+    body = body.replace(
+      /<main([^>]*)>/,
+      `<main$1><nav class="breadcrumbs" aria-label="Breadcrumb"><ol>${crumbs.map((crumb, i) => `<li>${i ? icon("chevron-right") : ""}${i === crumbs.length - 1 ? `<span aria-current="page">${e(crumb.name)}</span>` : `<a href="${crumb.url}">${e(crumb.name)}</a>`}</li>`).join("")}</ol></nav>`,
+    );
+  }
+  const graph = [
+    {
+      "@type": "WebSite",
+      "@id": `${origin}/#website`,
+      url: `${origin}/`,
+      name: "TypeScript Course",
+      inLanguage: "en",
+    },
+    {
+      "@type": lesson
+        ? ["WebPage", "LearningResource"]
+        : path === "/about/"
+          ? "AboutPage"
+          : path === "/course/" || path === "/reference/"
+            ? "CollectionPage"
+            : "WebPage",
+      "@id": `${origin}${path}#page`,
+      url: `${origin}${path}`,
+      name: title,
+      description,
+      inLanguage: "en",
+      isPartOf: { "@id": `${origin}/#website` },
+      ...(lesson
+        ? {
+            learningResourceType: lesson.number ? "Lesson" : "Project brief",
+            isAccessibleForFree: true,
+          }
+        : {}),
+      primaryImageOfPage: {
+        "@type": "ImageObject",
+        url: socialImage,
+        width: 1200,
+        height: 630,
+        caption: socialAlt,
+      },
+    },
+    ...(path !== "/"
+      ? [
+          {
+            "@type": "BreadcrumbList",
+            itemListElement: crumbs.map((crumb, i) => ({
+              "@type": "ListItem",
+              position: i + 1,
+              name: crumb.name,
+              item: origin + crumb.url,
+            })),
+          },
+        ]
+      : []),
+  ];
+  const schema = noindex
+    ? ""
+    : `<script type="application/ld+json">${JSON.stringify({ "@context": "https://schema.org", "@graph": graph }).replaceAll("<", "\\u003c")}</script>`;
+
+  return `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>${e(title)} · TypeScript Course</title><meta name="description" content="${e(description)}"><link rel="canonical" href="${origin}${path}"><meta property="og:type" content="website"><meta property="og:title" content="${e(title)} · TypeScript Course"><meta property="og:description" content="${e(description)}"><meta property="og:url" content="${origin}${path}"><meta property="og:image" content="${socialImage}"><meta property="og:image:type" content="image/png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="${e(socialAlt)}"><meta property="og:site_name" content="TypeScript Course"><meta property="og:locale" content="en_US"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="${e(title)}"><meta name="twitter:description" content="${e(description)}"><meta name="twitter:image" content="${socialImage}"><meta name="twitter:image:alt" content="${e(socialAlt)}">${schema}${noindex ? '<meta name="robots" content="noindex,follow">' : ""}<meta name="theme-color" content="#f7f8f6"><link rel="icon" href="/assets/favicon.svg" type="image/svg+xml"><link rel="preload" href="/assets/fonts/DepartureMono-Regular.woff2" as="font" type="font/woff2" crossorigin><link rel="stylesheet" href="/assets/site.css"><script src="/assets/site.js" defer></script></head><body data-course-ids="${e(JSON.stringify(ids))}">${nav(active)}${body}<footer><a class="brand" href="/">TypeScript / The course</a><p>Understand JavaScript. Use TypeScript. Check what runs.</p><div><a href="/course/">Learning path</a><a href="/research/">Sources & versions</a><a href="/sitemap.xml">Sitemap</a><a href="https://robertdevore.com">Robert DeVore</a><a href="https://github.com/robertdevore/typescript.robertdevore.com">Source code</a></div><small>Independent educational course. No affiliation with or endorsement by Microsoft or the named reference contributors.</small></footer></body></html>`;
 }
 async function page(path, title, description, body, active, noindex) {
   const directory = `dist${path}`;
@@ -238,6 +310,23 @@ await page(
   true,
 );
 await writeFile("dist/search-index.json", JSON.stringify(search));
+// Exact known routes only. Workers assets preserves query strings on these redirects.
+await writeFile(
+  "dist/_redirects",
+  [
+    "/index.html / 301",
+    ...[
+      "/course/",
+      "/about/",
+      "/reference/",
+      "/research/",
+      "/tracks/",
+      "/search/",
+      ...sequence.map((item) => item.url),
+    ].map((url) => `${url.slice(0, -1)} ${url} 301`),
+  ].join("\n") + "\n",
+);
+
 await writeFile(
   "dist/404.html",
   layout(

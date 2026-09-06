@@ -1190,3 +1190,26 @@ details[open] > summary > .icon {
     margin-left: 0;
   }
 }
+
+.breadcrumbs {
+  margin: 0 0 26px;
+  color: var(--muted);
+  font-size: 12px;
+}
+.breadcrumbs ol {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.breadcrumbs li {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.breadcrumbs .icon {
+  width: 14px;
+  height: 14px;
+}

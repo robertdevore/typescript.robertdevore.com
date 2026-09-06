@@ -82,7 +82,10 @@ test("production canonical and discovery metadata are consistent", async () => {
     assert.ok(!/localhost|127\.0\.0\.1/.test(head));
     assert.ok(!html.includes("{{example}}"));
     assert.ok(!html.includes("{{diagnostic}}"));
-    assert.match(head, /og:image.*typescript\.robertdevore\.com\/assets\/social\.png/);
+    assert.match(
+      head,
+      /og:image.*typescript\.robertdevore\.com\/assets\/(?:social|og\/[a-z-]+)\.png/,
+    );
   }
   const sitemap = await readFile("dist/sitemap.xml", "utf8");
   assert.equal((sitemap.match(/<loc>/g) || []).length, 47);
@@ -115,5 +118,36 @@ test("site JavaScript stays small and fonts are locally owned", async () => {
       search.some((x) => `${x.title} ${x.text}`.toLowerCase().includes(query.toLowerCase())),
       query,
     );
+  }
+});
+
+test("social images and structured data match their pages", async () => {
+  const manifest = JSON.parse(await readFile("howl.json", "utf8"));
+  const items = [...(await readCollection("lessons")), ...(await readCollection("builds"))];
+  assert.equal(manifest.cards.length, items.length);
+  for (const item of items) {
+    const card = manifest.cards.find((c) => c.id === item.slug);
+    assert.equal(card.title, item.title, "regenerate social cards after title changes");
+    assert.equal(card.tagline, item.description);
+    const png = await readFile(`assets/og/${item.slug}.png`);
+    assert.equal(png.subarray(1, 4).toString(), "PNG");
+    assert.equal(png.readUInt32BE(16), 1200);
+    assert.equal(png.readUInt32BE(20), 630);
+    const html = await readFile(`dist${item.url}index.html`, "utf8");
+    assert.ok(html.includes(`${origin}/assets/og/${item.slug}.png`));
+    const graph = JSON.parse(
+      html.match(/<script type="application\/ld\+json">(.*?)<\/script>/s)[1],
+    )["@graph"];
+    const page = graph.find((n) => n["@id"] === `${origin}${item.url}#page`);
+    assert.equal(page.name, item.title);
+    assert.ok(page["@type"].includes("LearningResource"));
+    assert.ok(!("datePublished" in page) && !("aggregateRating" in page));
+    const crumbs = graph.find((n) => n["@type"] === "BreadcrumbList").itemListElement;
+    assert.deepEqual(
+      crumbs.map((c) => c.position),
+      [1, 2, 3],
+    );
+    assert.equal(crumbs.at(-1).item, origin + item.url);
+    assert.ok(html.includes('aria-label="Breadcrumb"'));
   }
 });

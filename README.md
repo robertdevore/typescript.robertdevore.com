@@ -81,3 +81,11 @@ For a compiler upgrade: read release notes and the current iteration plan, updat
 ## Repository boundaries
 
 This repository lives independently at `/Users/robertdevore/2026/typescript.robertdevore.com`. Nearby Python and Rust repositories were read-only presentation references. The site has no runtime links or dependencies on them. No npm package is published by verification; the illustrative package name must be changed to an owned name before a learner publishes it.
+
+## Search and social verification
+
+The dated formal audit lives in `seo-audit/2026-09-06/`. It preserves the original build, live receipts, before/after inventories, crawler probes, Lighthouse reports, and measurement limits. Do not overwrite a completed audit; use a new dated workspace. SEO readiness does not prove indexing, rankings, or AI citations.
+
+Each lesson and build has a Howl-generated 1200×630 PNG under `assets/og`; other pages share the course image. Images are committed so installation and CI do not require Howl. To regenerate them after changing a title or description, install Howl and Kujo, set `HOWL_BIN` and `KUJO` when they are not on PATH, then run `npm run social:cards`. `BROWSER_CHANNEL=chrome` uses installed Chrome. The command derives `howl.json` from course metadata, validates its real source-file references, renders offline SVGs, applies the Inter body font, and converts them to PNG. The normal tests check manifest freshness, image dimensions, and page metadata. Howl does not type-check examples.
+
+JSON-LD describes the visible site, lesson resources, and breadcrumb trail. No ratings, publication dates, instructor credentials, or Google course-rich-result eligibility are inferred. Training-crawler policy remains unchanged. `llms.txt` is an optional index, not an SEO requirement.
