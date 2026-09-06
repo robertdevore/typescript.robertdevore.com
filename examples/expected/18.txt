@@ -1,0 +1,3 @@
+examples/invalid/18.ts(2,7): error TS2375: Type '{ label: undefined; }' is not assignable to type 'Options' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.
+  Types of property 'label' are incompatible.
+    Type 'undefined' is not assignable to type 'string'.

@@ -1,0 +1,3 @@
+examples/invalid/30.ts(1,6): error TS2456: Type alias 'Endless' circularly references itself.
+examples/invalid/30.ts(1,19): error TS2315: Type 'Endless' is not generic.
+examples/invalid/30.ts(1,34): error TS2315: Type 'Endless' is not generic.

@@ -1,0 +1,200 @@
+[
+  {
+    "concept": "release",
+    "recommendation": "Pin 7.0.2, native compiler and LSP stable; API work separately classified",
+    "source": "https://devblogs.microsoft.com/typescript/announcing-typescript-7-0/",
+    "status": "STABLE",
+    "dateVerified": "2026-09-06",
+    "lessons": "1,18,30,35,36",
+    "runtimeImplications": "Native implementation does not add runtime type checks"
+  },
+  {
+    "concept": "roadmap",
+    "recommendation": "Use current issue body; cached search dates differed from current issue",
+    "source": "https://github.com/microsoft/TypeScript/issues/63703",
+    "status": "PROPOSED",
+    "dateVerified": "2026-09-06",
+    "lessons": "1,29,35,36",
+    "runtimeImplications": "Do not teach planned 7.1 API as released"
+  },
+  {
+    "concept": "design",
+    "recommendation": "Structural compatibility with deliberate unsoundness; no automatic runtime checks",
+    "source": "https://github.com/microsoft/TypeScript/wiki/TypeScript-Design-Goals",
+    "status": "STABLE",
+    "dateVerified": "2026-09-06",
+    "lessons": "8,17,33",
+    "runtimeImplications": "Validate external boundaries independently"
+  },
+  {
+    "concept": "narrowing",
+    "recommendation": "Ordinary checks provide control-flow evidence; predicates remain trusted claims",
+    "source": "https://www.typescriptlang.org/docs/handbook/2/narrowing.html",
+    "status": "STABLE",
+    "dateVerified": "2026-09-06",
+    "lessons": "5,7,9,16,20",
+    "runtimeImplications": "Guard null and categories before properties"
+  },
+  {
+    "concept": "generics",
+    "recommendation": "Preserve input-output relationships, avoid constructing arbitrary constraint subtypes",
+    "source": "https://www.typescriptlang.org/docs/handbook/2/generics.html",
+    "status": "STABLE",
+    "dateVerified": "2026-09-06",
+    "lessons": "11,12,26",
+    "runtimeImplications": "Generic type parameters do not exist at runtime"
+  },
+  {
+    "concept": "conditional",
+    "recommendation": "Distribution occurs on naked type parameters; test exact relationships",
+    "source": "https://www.typescriptlang.org/docs/handbook/2/conditional-types.html",
+    "status": "STABLE",
+    "dateVerified": "2026-09-06",
+    "lessons": "14,32",
+    "runtimeImplications": "No runtime transformations from types"
+  },
+  {
+    "concept": "modules",
+    "recommendation": "Trace source/resolution/emit/runtime; NodeNext for direct Node output",
+    "source": "https://www.typescriptlang.org/docs/handbook/modules/theory.html",
+    "status": "STABLE",
+    "dateVerified": "2026-09-06",
+    "lessons": "18,19,28",
+    "runtimeImplications": "paths does not rewrite runtime imports"
+  },
+  {
+    "concept": "node-modules",
+    "recommendation": "Use explicit package type and exported entry points; ESM-only lab",
+    "source": "https://nodejs.org/docs/latest-v24.x/api/packages.html",
+    "status": "STABLE",
+    "dateVerified": "2026-09-06",
+    "lessons": "19,28",
+    "runtimeImplications": "Test installed tarball rather than workspace-only resolution"
+  },
+  {
+    "concept": "declarations",
+    "recommendation": "Declarations describe real runtime APIs; globals do not allocate implementations",
+    "source": "https://www.typescriptlang.org/docs/handbook/declaration-files/introduction.html",
+    "status": "STABLE",
+    "dateVerified": "2026-09-06",
+    "lessons": "27,28",
+    "runtimeImplications": "Consumer runtime tests required"
+  },
+  {
+    "concept": "strictness",
+    "recommendation": "Explicit types/rootDir and strict policy; indexing and optional-property checks additional",
+    "source": "https://www.typescriptlang.org/tsconfig/",
+    "status": "STABLE",
+    "dateVerified": "2026-09-06",
+    "lessons": "1,18",
+    "runtimeImplications": "lib and types declarations do not install APIs"
+  },
+  {
+    "concept": "migration",
+    "recommendation": "allowJs/checkJs and declaration emit; native JSDoc changes reviewed",
+    "source": "https://github.com/microsoft/typescript-go/blob/main/CHANGES.md",
+    "status": "STABLE",
+    "dateVerified": "2026-09-06",
+    "lessons": "31",
+    "runtimeImplications": "Preserve behavior separately from file conversion"
+  },
+  {
+    "concept": "variance",
+    "recommendation": "Function parameter direction and method bivariance exception",
+    "source": "https://github.com/microsoft/TypeScript/wiki/FAQ",
+    "status": "STABLE",
+    "dateVerified": "2026-09-06",
+    "lessons": "17,33",
+    "runtimeImplications": "Execute controlled callback and array unsoundness cases"
+  },
+  {
+    "concept": "promises",
+    "recommendation": "Promise jobs and async execution use JavaScript semantics",
+    "source": "https://tc39.es/ecma262/multipage/control-abstraction-objects.html",
+    "status": "STABLE",
+    "dateVerified": "2026-09-06",
+    "lessons": "3,21",
+    "runtimeImplications": "Promise.all does not cancel siblings"
+  },
+  {
+    "concept": "runtime-support",
+    "recommendation": "Node 24 LTS baseline at 24.20.0; Node 26 comparison separate",
+    "source": "https://nodejs.org/en/about/previous-releases",
+    "status": "STABLE",
+    "dateVerified": "2026-09-06",
+    "lessons": "1,25,36",
+    "runtimeImplications": "Actual host support tested"
+  },
+  {
+    "concept": "decorators",
+    "recommendation": "Current proposal repository reports 2.7; do not equate legacy TS semantics with ECMAScript",
+    "source": "https://github.com/tc39/proposal-decorators",
+    "status": "TC39 PROPOSAL",
+    "dateVerified": "2026-09-06",
+    "lessons": "research,tracks",
+    "runtimeImplications": "Not used in core runtime examples"
+  },
+  {
+    "concept": "resource-management",
+    "recommendation": "Finished proposal reviewed; choose finally for portable core ownership examples",
+    "source": "https://github.com/tc39/proposals/blob/main/finished-proposals.md",
+    "status": "STABLE",
+    "dateVerified": "2026-09-06",
+    "lessons": "21,25,tracks",
+    "runtimeImplications": "Host support remains a separate check"
+  },
+  {
+    "concept": "schema-library",
+    "recommendation": "Zod 4 documentation reviewed as optional comparison; no runtime dependency required",
+    "source": "https://zod.dev/",
+    "status": "STABLE",
+    "dateVerified": "2026-09-06",
+    "lessons": "20",
+    "runtimeImplications": "Handwritten small parser retains explicit unknown boundary"
+  },
+  {
+    "concept": "testing",
+    "recommendation": "Use Node built-in runner plus pinned native CLI type fixtures",
+    "source": "https://nodejs.org/docs/latest-v24.x/api/test.html",
+    "status": "STABLE",
+    "dateVerified": "2026-09-06",
+    "lessons": "23",
+    "runtimeImplications": "Await tests and release resources"
+  },
+  {
+    "concept": "lint",
+    "recommendation": "Flat-config ESLint for JS tooling; no unverified native type-aware integration claim",
+    "source": "https://eslint.org/docs/latest/use/getting-started",
+    "status": "STABLE",
+    "dateVerified": "2026-09-06",
+    "lessons": "24",
+    "runtimeImplications": "Compiler checking remains a separate command"
+  },
+  {
+    "concept": "format",
+    "recommendation": "Prettier pinned; code and prose formatting checked in CI",
+    "source": "https://prettier.io/docs/install",
+    "status": "STABLE",
+    "dateVerified": "2026-09-06",
+    "lessons": "24,36",
+    "runtimeImplications": "Formatting does not validate behavior"
+  },
+  {
+    "concept": "deployment",
+    "recommendation": "Workers Static Assets recommended for new static projects; custom domain and explicit 404",
+    "source": "https://developers.cloudflare.com/workers/static-assets/routing/static-site-generation/",
+    "status": "STABLE",
+    "dateVerified": "2026-09-06",
+    "lessons": "implementation",
+    "runtimeImplications": "No Worker runtime or SPA fallback required"
+  },
+  {
+    "concept": "native-performance",
+    "recommendation": "Measure current diagnostics; checkers/builders trade CPU and memory",
+    "source": "https://devblogs.microsoft.com/typescript/announcing-typescript-7-0/",
+    "status": "STABLE",
+    "dateVerified": "2026-09-06",
+    "lessons": "29,30",
+    "runtimeImplications": "No transplanted historical speedup claims"
+  }
+]

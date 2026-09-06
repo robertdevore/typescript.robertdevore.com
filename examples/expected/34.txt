@@ -1,0 +1,5 @@
+examples/invalid/34.ts(5,9): error TS2322: Type '() => Promise<{ label: number; }>' is not assignable to type '(id: string) => Promise<{ label: string; } | undefined>'.
+  Type 'Promise<{ label: number; }>' is not assignable to type 'Promise<{ label: string; } | undefined>'.
+    Type '{ label: number; }' is not assignable to type '{ label: string; }'.
+      Types of property 'label' are incompatible.
+        Type 'number' is not assignable to type 'string'.

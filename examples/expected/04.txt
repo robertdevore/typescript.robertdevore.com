@@ -1,0 +1,1 @@
+examples/invalid/04.ts(2,5): error TS2540: Cannot assign to 'id' because it is a read-only property.

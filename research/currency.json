@@ -1,0 +1,158 @@
+{
+  "verifiedAt": "2026-09-06T21:58:28.563Z",
+  "runtime": "v24.20.0",
+  "tags": {
+    "dev": "3.9.4",
+    "tag-for-publishing-older-releases": "4.1.6",
+    "insiders": "4.6.2-insiders.20220225",
+    "beta": "6.0.0-beta",
+    "rc": "7.0.1-rc",
+    "latest": "7.0.2",
+    "next": "7.1.0-dev.20260906.1"
+  },
+  "sources": [
+    {
+      "concept": "release",
+      "url": "https://devblogs.microsoft.com/typescript/announcing-typescript-7-0/",
+      "status": 200,
+      "bytes": 290101
+    },
+    {
+      "concept": "iteration",
+      "url": "https://api.github.com/repos/microsoft/TypeScript/issues/63703",
+      "status": 200,
+      "bytes": 5242,
+      "updatedAt": "2026-09-05T19:13:13Z",
+      "plan": "Date       | Milestone\n:----------|-----------\n2026-10-02 | Beta Prep\n2026-10-06 | 7.1 Beta Release\n2026-11-06 | RC Prep\n2026-11-10 | 7.1 RC Release\n2026-11-20 | Stable Prep\n2026-11-24 | 7.1 Stable Release\n\n## Language and Compiler\n\n* Stabilize API\n    * [Content Mapper API](https://github.com/microsoft/typescript-go/pull/4712)\n    * [Emit API](https://github.com/microsoft/typescript-go/pull/4699)\n    * Language Service API\n* [Support `type` On Import Attributes](https://github.com/microsoft/TypeScript/issues/46135)\n* [Investigate Node 26 Package Maps](https://nodejs.org/api/packages.html#package-maps)\n* [Add `es2026` option for `lib` and `target`](https://github.com/microsoft/TypeScript/issues/63704)\n* [Support Source Phase Imports](https://github.com/microsoft/TypeScript/issues/61216)\n* [`lib.d.ts` Updates for New Iterator Methods](https://github.com/microsoft/TypeScript/issues/63700)\n* [`Promise.allKeyed` and `Promise.allSettledKeyed`](https://github.com/microsoft/TypeScript/issues/63701)\n* [`lib.d.ts` Updates for DOM](https://github.com/microsoft/TypeScript/issues/63702)\n\n## Editor Productivity\n\n* Replace Existing API Integrations in VS Code\n* Investigate New Expandable Hover API in LSP\n* Investigate Multi-document Highlighting API in LSP\n* Investigate Region Diagnostics in LSP\n\n## Performance\n\n* [Faster Union Type Construction](https://github.com/microsoft/typescript-go/pull/4687)\n* [Lazily Collect Source File Identifiers](https://github.com/microsoft/typescript-go/pull/4731)\n* [Fast Path for Assignment Narrowing on Unions](https://github.com/microsoft/typescript-go/pull/4711)\n* [Fast Path for Equality &amp; `switch`/`case` Narrowing on Unions](https://github.com/microsoft/typescript-go/pull/4781)\n* [Optimize Representations of Checker-Specific Side-Tables](https://github.com/microsoft/typescript-go/pull/4329)\n* [Experiment with Algorithms for Distributing Files Across Type-Checkers](https://github.com/microsoft/typescript-go/pull/4313)\n* Probably more!\n\n## Infrastructure\n\n* Static Analysis for Nil Checking and Casts\n* Migrate repository to microsoft/TypeScript\n    * Overhaul of Publishing Pipeline\n* [Publish wasm (wasip1?) Build](https://github.com/microsoft/typescript-go/pull/4733)\n* [Publish Android ARM64 Build](https://github.com/microsoft/typescript-go/pull/4734)\n* [Flaky Diagnostics Detection](https://github.com/microsoft/typescript-go/pull/4710)\n\n## Website\n\n* Monaco LSP Feedback\n* Getting Playground Running with wasm\n* Speed up website builds\n"
+    },
+    {
+      "concept": "handbook",
+      "url": "https://www.typescriptlang.org/docs/handbook/intro.html",
+      "status": 200,
+      "bytes": 196232
+    },
+    {
+      "concept": "config",
+      "url": "https://www.typescriptlang.org/tsconfig/",
+      "status": 200,
+      "bytes": 809189
+    },
+    {
+      "concept": "modules",
+      "url": "https://nodejs.org/docs/latest-v24.x/api/packages.html",
+      "status": 200,
+      "bytes": 109270
+    },
+    {
+      "concept": "node",
+      "url": "https://nodejs.org/en/about/previous-releases",
+      "status": 200,
+      "bytes": 296070
+    },
+    {
+      "concept": "proposals",
+      "url": "https://raw.githubusercontent.com/tc39/proposals/main/README.md",
+      "status": 200,
+      "bytes": 72471
+    },
+    {
+      "concept": "finished",
+      "url": "https://raw.githubusercontent.com/tc39/proposals/main/finished-proposals.md",
+      "status": 200,
+      "bytes": 133563
+    },
+    {
+      "concept": "decorators",
+      "url": "https://raw.githubusercontent.com/tc39/proposal-decorators/master/README.md",
+      "status": 200,
+      "bytes": 41520
+    },
+    {
+      "concept": "changes",
+      "url": "https://raw.githubusercontent.com/microsoft/typescript-go/main/CHANGES.md",
+      "status": 200,
+      "bytes": 17102
+    }
+  ],
+  "packages": [
+    {
+      "name": "typescript",
+      "registry": {
+        "version": "7.0.2",
+        "engines": {
+          "node": ">=16.20.0"
+        }
+      }
+    },
+    {
+      "name": "@types/node",
+      "registry": "26.4.1"
+    },
+    {
+      "name": "markdown-it",
+      "registry": "15.0.1"
+    },
+    {
+      "name": "highlight.js",
+      "registry": {
+        "version": "11.12.0",
+        "engines": {
+          "node": ">=12.0.0"
+        }
+      }
+    },
+    {
+      "name": "esbuild",
+      "registry": {
+        "version": "0.28.2",
+        "engines": {
+          "node": ">=18"
+        }
+      }
+    },
+    {
+      "name": "wrangler",
+      "registry": {
+        "version": "4.129.0",
+        "engines": {
+          "node": ">=22.0.0"
+        }
+      }
+    },
+    {
+      "name": "@playwright/test",
+      "registry": {
+        "version": "1.63.0",
+        "engines": {
+          "node": ">=20"
+        }
+      }
+    },
+    {
+      "name": "@axe-core/playwright",
+      "registry": "4.13.0"
+    },
+    {
+      "name": "eslint",
+      "registry": {
+        "version": "10.10.0",
+        "engines": {
+          "node": "^20.19.0 || ^22.13.0 || >=24"
+        }
+      }
+    },
+    {
+      "name": "prettier",
+      "registry": {
+        "version": "3.9.6",
+        "engines": {
+          "node": ">=14"
+        }
+      }
+    },
+    {
+      "name": "zod",
+      "registry": "4.5.4"
+    }
+  ]
+}

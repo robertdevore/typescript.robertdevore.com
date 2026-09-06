@@ -1,0 +1,1 @@
+examples/invalid/15.ts(2,7): error TS2820: Type '"job:finised"' is not assignable to type '"job:finished" | "job:queued"'. Did you mean '"job:finished"'?

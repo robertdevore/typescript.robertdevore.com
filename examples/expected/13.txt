@@ -1,0 +1,1 @@
+examples/invalid/13.ts(2,24): error TS2353: Object literal may only specify known properties, and 'id' does not exist in type 'Partial<Pick<{ id: string; attempts: number; }, "attempts">>'.

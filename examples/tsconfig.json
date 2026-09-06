@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "types": ["node"],
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+    "verbatimModuleSyntax": true,
+    "noEmitOnError": true,
+    "declaration": true,
+    "sourceMap": true,
+    "rootDir": "valid",
+    "outDir": "../.work/examples"
+  },
+  "include": ["valid/**/*.ts"]
+}

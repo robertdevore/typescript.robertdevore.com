@@ -1,0 +1,2 @@
+examples/invalid/05.ts(2,16): error TS2339: Property 'toUpperCase' does not exist on type 'string | number'.
+  Property 'toUpperCase' does not exist on type 'number'.

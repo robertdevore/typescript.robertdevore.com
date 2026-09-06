@@ -1,0 +1,1 @@
+examples/invalid/35.ts(2,13): error TS2304: Cannot find name 'jbo'.

@@ -1,0 +1,1 @@
+examples/invalid/14.ts(3,21): error TS2344: Type 'false' does not satisfy the constraint 'true'.

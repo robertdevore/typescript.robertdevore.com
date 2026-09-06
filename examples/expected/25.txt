@@ -1,0 +1,2 @@
+examples/invalid/25.ts(1,7): error TS2322: Type 'string | undefined' is not assignable to type 'number'.
+  Type 'undefined' is not assignable to type 'number'.

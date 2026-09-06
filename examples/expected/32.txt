@@ -1,0 +1,2 @@
+examples/invalid/32.ts(3,7): error TS2322: Type 'string' is not assignable to type 'JobId'.
+  Type 'string' is not assignable to type '{ readonly [brand]: true; }'.

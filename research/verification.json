@@ -1,0 +1,227 @@
+{
+  "compiler": "Version 7.0.2",
+  "runtime": "v24.20.0",
+  "verifiedAt": "2026-09-06T22:03:10.224Z",
+  "examples": [
+    {
+      "id": "01",
+      "diagnostic": 2345,
+      "sourceHash": "b155f21ad42befdb1841b22ac7d7d4b0f6c43a493d946dabbf48b51b329e75f2",
+      "stdout": "Welcome, developer!\n"
+    },
+    {
+      "id": "02",
+      "diagnostic": 2322,
+      "sourceHash": "617073173c1927c7fc564bd5935f97daf1afdf8909394f38c4008fcdc6fd25d0",
+      "stdout": "object false\nfalse\n"
+    },
+    {
+      "id": "03",
+      "diagnostic": 2551,
+      "sourceHash": "ab90e7d2d8c9a59d127973f2d7e5eb8f7a406fc859b0e94394896f833e4b0a0b",
+      "stdout": "job: ready (#1)\njob: done today (#2)\n"
+    },
+    {
+      "id": "04",
+      "diagnostic": 2540,
+      "sourceHash": "eabe7df3e62a3f591c24f9fe5084cbdaff974ee52095b50054f9afa1d598ab3c",
+      "stdout": "j1: 1\n"
+    },
+    {
+      "id": "05",
+      "diagnostic": 2339,
+      "sourceHash": "2f82ba29f05050a388d98defd4db700931adbede7400a7dc79de72bdb7314d10",
+      "stdout": "0\n12\nempty\n"
+    },
+    {
+      "id": "06",
+      "diagnostic": 2430,
+      "sourceHash": "4cc984217fb596828d66755b1cf190c5cf3e4751f95963c795733cf5c69b1e74",
+      "stdout": "j1: Import\nid,label,owner\n"
+    },
+    {
+      "id": "07",
+      "diagnostic": 2532,
+      "sourceHash": "f6b7d4fb9a2ddcfeb8d47f0569eff051878aa838cd5a56b2bf3724563bfff29a",
+      "stdout": "0\ninvalid_count\n"
+    },
+    {
+      "id": "08",
+      "diagnostic": 2353,
+      "sourceHash": "154fd8e13e26109a3ee315cdcd3ae3847c19e7494837a2814bd5bf319440afb8",
+      "stdout": "j1\n{\"id\":\"j1\",\"internal\":true}\n"
+    },
+    {
+      "id": "09",
+      "diagnostic": 18046,
+      "sourceHash": "3e002148e2c19a64f968f4b8edae6d70c6cbc6f722e6fa57f471461cc07b5a19",
+      "stdout": "READY\nstop\n"
+    },
+    {
+      "id": "10",
+      "diagnostic": 2322,
+      "sourceHash": "b888ce09970381dc4f61929513f2223809f6050449d4571acf4c45dc26cae7f8",
+      "stdout": "2 jobs\n"
+    },
+    {
+      "id": "11",
+      "diagnostic": 2322,
+      "sourceHash": "118e146c55eaf1a5e42501327ec43be7108558515f9e0e53183474443446c2b1",
+      "stdout": "2\n"
+    },
+    {
+      "id": "12",
+      "diagnostic": 2345,
+      "sourceHash": "16ea27fd82f906f1d152b02fb5980e13cbe62be8adce9f13cdfd0f57a4c358b6",
+      "stdout": "2 j1\n"
+    },
+    {
+      "id": "13",
+      "diagnostic": 2353,
+      "sourceHash": "5a8f07c2a6e1ecb11417d8433a0408ab50354455982cee0bb265077d0ac2d7dd",
+      "stdout": "2\n"
+    },
+    {
+      "id": "14",
+      "diagnostic": 2344,
+      "sourceHash": "a9251002d23b9d7451af4330354961375e00fd66f9620960165480be9eb3328d",
+      "stdout": "job: 2\n"
+    },
+    {
+      "id": "15",
+      "diagnostic": 2820,
+      "sourceHash": "73e3195eee641e8094c172c0482ffc0b0cac4739aeb4282269f1ef2bf4431362",
+      "stdout": "job:finished j1\n"
+    },
+    {
+      "id": "16",
+      "diagnostic": 2345,
+      "sourceHash": "08c4e08bbd18a1bcee5b206459707a9540622002c85185100ce38c184295ec36",
+      "stdout": "done in 12ms\n"
+    },
+    {
+      "id": "17",
+      "diagnostic": 2322,
+      "sourceHash": "27be9a40cdb05fa3c4b56b1cfc98729de46076c8cfef00875460eee7eecd0440",
+      "stdout": "j1\nj2\n"
+    },
+    {
+      "id": "18",
+      "diagnostic": 2375,
+      "sourceHash": "30b768f7eddfb489b55fba8f67ab8a170481016abcf00c2ba8a4f5fdd6f4a255",
+      "stdout": "0\n"
+    },
+    {
+      "id": "19",
+      "diagnostic": 1361,
+      "sourceHash": "0a4647b26d14ffba7c527f27b92c51c27e0870d7affed7791bae9e1c98561792",
+      "stdout": "import.json\n"
+    },
+    {
+      "id": "20",
+      "diagnostic": 18046,
+      "sourceHash": "e0162513fdc8e75bd6a86e0cd170365078ef43c3db8ca037e50ea0d5efc55c8f",
+      "stdout": "{\"id\":\"j1\",\"attempts\":2}\nInvalid id\n"
+    },
+    {
+      "id": "21",
+      "diagnostic": 2322,
+      "sourceHash": "475fda7ede811040943e48ca0ad15e02d5ee65530633a12f33bc7a74ee480ae9",
+      "stdout": "sync\nmicrotask\ncancelled\n2 jobs\n"
+    },
+    {
+      "id": "22",
+      "diagnostic": 2322,
+      "sourceHash": "d5960409494e63933750052a9b5e856d5657846aa099c161185bb1c7bf372f9d",
+      "stdout": "j1\n"
+    },
+    {
+      "id": "23",
+      "diagnostic": 2578,
+      "sourceHash": "bedd15ebf3f16012befa6b2e0bd992503a0f3dcf9109e0a9b012ccb512cfeb32",
+      "stdout": "runtime and type contract passed\n"
+    },
+    {
+      "id": "24",
+      "diagnostic": 2322,
+      "sourceHash": "a79c6b2c9b7fc18e2755f8e737510e18fd5a803cb3dcc6007f304e6f855b850c",
+      "stdout": "saved\n"
+    },
+    {
+      "id": "25",
+      "diagnostic": 2322,
+      "sourceHash": "ce83a958cc48f0054b46520ded5a66f9d9e61e555c04942f7302ce6f85944e81",
+      "stdout": "j1\n"
+    },
+    {
+      "id": "26",
+      "diagnostic": 2345,
+      "sourceHash": "9ef143bf78c1e61f9e99dca159f91f066fbc12515b7c2991621f16a3c7d6f23c",
+      "stdout": "4\n"
+    },
+    {
+      "id": "27",
+      "diagnostic": 2322,
+      "sourceHash": "93604bca7992ba78490841985ec7d795459f9474f802266a15f8ff180b8eb731",
+      "stdout": "{\"ok\":true,\"value\":\"Import\"}\n"
+    },
+    {
+      "id": "28",
+      "diagnostic": 2322,
+      "sourceHash": "819e0fd526db601a116fc5e09e80bc81b8c1abc2ee20e50a72d27d4938321efd",
+      "stdout": "{\"total\":5}\n"
+    },
+    {
+      "id": "29",
+      "diagnostic": 2322,
+      "sourceHash": "6de5365b0f965cdb7c83b8b0c751282da7ebd3b63100ca109a82c66ad8c7bed3",
+      "stdout": "Import\n"
+    },
+    {
+      "id": "30",
+      "diagnostic": [
+        2456,
+        2315,
+        2315
+      ],
+      "sourceHash": "b7997bf645b07d62634e005e4e960ba2e39d1f2d84c2c2f6bc681d11a9e0fc9f",
+      "stdout": "{\"total\":1,\"attempts\":2}\n"
+    },
+    {
+      "id": "31",
+      "diagnostic": 2345,
+      "sourceHash": "bf9e0e188f3b910f7948e43bd70aa359e0707ccaf5b68300c921b57d226a3aae",
+      "stdout": "2\n"
+    },
+    {
+      "id": "32",
+      "diagnostic": 2322,
+      "sourceHash": "02f14fc44da7a05d548619fe3ae7af02e8dd6c8b1064a66fffe9cc1ae9b5317c",
+      "stdout": "job_abc\n"
+    },
+    {
+      "id": "33",
+      "diagnostic": 18047,
+      "sourceHash": "76ac3a3a1ef1bcf52af9aeec5f6394834c3c2703cb0e68f9240729ff80d36932",
+      "stdout": "3\n"
+    },
+    {
+      "id": "34",
+      "diagnostic": 2322,
+      "sourceHash": "2e144126ecd5311a76196b63a492dbb959207ac5609622cdbe53fcefe4193d81",
+      "stdout": "j1: Import\n"
+    },
+    {
+      "id": "35",
+      "diagnostic": 2304,
+      "sourceHash": "1122b2e0ab48dd408f2d7f339f3076b1cf1ccc089205fde6a5b46c8931ea63ac",
+      "stdout": "Job j1\n"
+    },
+    {
+      "id": "36",
+      "diagnostic": 2322,
+      "sourceHash": "9d2b7a54e0da875d93d3cb936bda38589436613e86e5e5190e51bd80cc405ad3",
+      "stdout": "release contract verified\n"
+    }
+  ]
+}

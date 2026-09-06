@@ -1,0 +1,1 @@
+examples/invalid/21.ts(4,7): error TS2322: Type 'Promise<number>' is not assignable to type 'number'.
