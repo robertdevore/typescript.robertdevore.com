@@ -1,0 +1,43 @@
+{
+  "base": "http://127.0.0.1:4173",
+  "checks": [
+    {
+      "route": "/",
+      "accessibility": "passed"
+    },
+    {
+      "route": "/course/",
+      "accessibility": "passed"
+    },
+    {
+      "route": "/lessons/modules/",
+      "accessibility": "passed"
+    },
+    {
+      "route": "/lessons/runtime-validation/",
+      "accessibility": "passed"
+    },
+    {
+      "route": "/builds/capstone/",
+      "accessibility": "passed"
+    },
+    {
+      "route": "/reference/",
+      "accessibility": "passed"
+    },
+    {
+      "route": "/search/",
+      "accessibility": "passed"
+    }
+  ],
+  "search": "passed",
+  "progress": "passed",
+  "mobile": "passed",
+  "dom": "passed",
+  "noJavaScript": "passed",
+  "blockedStorage": "passed",
+  "consoleErrors": [],
+  "browserVersion": "152.0.7977.77",
+  "clipboard": "passed",
+  "keyboard": "passed"
+}

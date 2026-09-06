@@ -1,0 +1,11 @@
+node_modules
+dist
+.work
+.wrangler
+package-lock.json
+research/verification.json
+examples/expected
+assets/fonts
+labs/*/dist
+# Intentional narrow layout of the homepage teaching example.
+labs/hero.ts

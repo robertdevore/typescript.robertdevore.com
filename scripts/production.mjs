@@ -1,0 +1,98 @@
+import { resolve4 } from "node:dns/promises";
+import tls from "node:tls";
+import assert from "node:assert/strict";
+import { writeFile } from "node:fs/promises";
+const origin = "https://typescript.robertdevore.com",
+  host = new URL(origin).hostname;
+const addresses = await resolve4(host);
+const certificate = await new Promise((resolve, reject) => {
+  const socket = tls.connect(
+    { host, port: 443, servername: host, rejectUnauthorized: true },
+    () => {
+      const cert = socket.getPeerCertificate();
+      resolve({
+        authorized: socket.authorized,
+        subject: cert.subject,
+        issuer: cert.issuer,
+        validFrom: cert.valid_from,
+        validTo: cert.valid_to,
+        subjectAltName: cert.subjectaltname,
+      });
+      socket.end();
+    },
+  );
+  socket.setTimeout(15000, () => socket.destroy(new Error("TLS timeout")));
+  socket.on("error", reject);
+});
+assert.equal(certificate.authorized, true);
+const fetchText = async (path) => {
+  const response = await fetch(origin + path, { signal: AbortSignal.timeout(20000) });
+  assert.equal(response.status, 200, path);
+  return { response, text: await response.text() };
+};
+const { text: sitemap } = await fetchText("/sitemap.xml");
+const urls = [...sitemap.matchAll(/<loc>(.*?)<\/loc>/g)].map((m) => m[1]);
+assert.equal(urls.length, 47);
+const checked = [];
+for (const url of urls) {
+  const path = new URL(url).pathname;
+  const { response, text } = await fetchText(path);
+  assert.ok(text.includes(`rel="canonical" href="${url}"`), path);
+  assert.ok(text.includes(`<meta property="og:url" content="${url}"`), path);
+  const head = text.slice(0, text.indexOf("</head>"));
+  assert.ok(
+    !/localhost|127\.0\.0\.1|pages\.dev|workers\.dev|python\.robertdevore\.com/.test(head),
+    path,
+  );
+  assert.ok(response.headers.get("content-type")?.includes("text/html"));
+  checked.push(path);
+}
+for (const path of [
+  "/assets/site.css",
+  "/assets/site.js",
+  "/assets/social.png",
+  "/assets/fonts/DepartureMono-Regular.woff2",
+  "/assets/fonts/inter-latin-400.woff2",
+  "/search-index.json",
+  "/robots.txt",
+  "/labs/browser/",
+]) {
+  const response = await fetch(origin + path, { signal: AbortSignal.timeout(20000) });
+  assert.equal(response.status, 200, path);
+  checked.push(path);
+}
+const missing = await fetch(origin + "/this-route-does-not-exist/", {
+  signal: AbortSignal.timeout(20000),
+});
+assert.equal(missing.status, 404);
+const redirect = await fetch(origin + "/lessons/modules", {
+  redirect: "manual",
+  signal: AbortSignal.timeout(20000),
+});
+assert.ok([301, 308].includes(redirect.status));
+assert.ok(redirect.headers.get("location")?.endsWith("/lessons/modules/"));
+const http = await fetch("http://" + host + "/", {
+  redirect: "manual",
+  signal: AbortSignal.timeout(20000),
+});
+assert.ok([301, 302, 307, 308].includes(http.status));
+assert.ok(http.headers.get("location")?.startsWith(origin));
+await writeFile(
+  "research/production-verification.json",
+  JSON.stringify(
+    {
+      verifiedAt: new Date().toISOString(),
+      addresses,
+      certificate,
+      checked,
+      notFound: missing.status,
+      trailingSlash: redirect.status,
+      httpRedirect: http.status,
+    },
+    null,
+    2,
+  ) + "\n",
+);
+console.log(
+  `Production verified: DNS, trusted TLS, ${urls.length} pages, assets, metadata, sitemap, 404, trailing-slash and HTTPS redirects.`,
+);

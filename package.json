@@ -1,0 +1,38 @@
+{
+  "name": "typescript-robertdevore-com",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24.20.0 <27"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "dev": "npm run build && wrangler dev",
+    "check:examples": "node scripts/check-examples.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "test:browser": "node scripts/browser.mjs",
+    "lint": "eslint scripts tests assets/site.js",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "verify": "npm run check:examples && npm run check:labs && npm run build && npm test && npm run lint && npm run format:check",
+    "deploy": "npm run verify && wrangler deploy",
+    "check:labs": "node scripts/check-labs.mjs",
+    "check:package": "node scripts/check-package.mjs",
+    "preview": "node scripts/serve.mjs"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "4.13.0",
+    "@eslint/js": "10.0.1",
+    "@playwright/test": "1.63.0",
+    "@types/node": "24.13.3",
+    "esbuild": "0.28.2",
+    "eslint": "10.10.0",
+    "globals": "17.12.0",
+    "highlight.js": "11.12.0",
+    "markdown-it": "15.0.1",
+    "prettier": "3.9.6",
+    "typescript": "7.0.2",
+    "wrangler": "4.129.0"
+  }
+}
