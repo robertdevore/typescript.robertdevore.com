@@ -1,5 +1,5 @@
 {
-  "verifiedAt": "2026-09-06T22:07:22.594Z",
+  "verifiedAt": "2026-09-06T22:32:31.186Z",
   "addresses": ["104.21.76.202", "172.67.200.180"],
   "certificate": {
     "authorized": true,
@@ -11,9 +11,9 @@
       "O": "Google Trust Services",
       "CN": "WE1"
     },
-    "validFrom": "Jul 29 06:22:37 2026 GMT",
-    "validTo": "Oct 27 07:19:50 2026 GMT",
-    "subjectAltName": "DNS:robertdevore.com, DNS:*.robertdevore.com"
+    "validFrom": "Sep  6 21:08:03 2026 GMT",
+    "validTo": "Dec  5 22:08:00 2026 GMT",
+    "subjectAltName": "DNS:robertdevore.com, DNS:typescript.robertdevore.com, DNS:*.typescript.robertdevore.com"
   },
   "checked": [
     "/",
