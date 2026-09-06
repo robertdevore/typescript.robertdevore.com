@@ -9,6 +9,16 @@ const browser = await chromium.launch(
 const context = await browser.newContext({ viewport: { width: 1440, height: 1000 } });
 const page = await context.newPage();
 const errors = [];
+const analyticsRequests = [];
+page.on("request", (request) => {
+  if (
+    /\/cdn-cgi\/(zaraz|rum)(?:\/|$|\?)|doubleclick\.net|google-analytics\.com|cloudflareinsights\.com/.test(
+      request.url(),
+    )
+  ) {
+    analyticsRequests.push(request.url().split("?")[0]);
+  }
+});
 page.on("pageerror", (error) => errors.push(error.message));
 page.on("console", (msg) => {
   if (msg.type() === "error") errors.push(msg.text());
@@ -135,6 +145,7 @@ try {
   await blockedPage.goto(base + "/lessons/setup/");
   await expect(blockedPage.locator(".storage-note")).toContainText("unavailable");
   await blocked.close();
+  assert.deepEqual([...new Set(analyticsRequests)], [], "No injected analytics");
   assert.deepEqual(errors, []);
   await writeFile(
     "research/browser-verification.json",

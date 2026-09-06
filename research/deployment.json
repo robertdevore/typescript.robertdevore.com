@@ -1,0 +1,16 @@
+{
+  "verifiedAt": "2026-09-06",
+  "site": "https://typescript.robertdevore.com",
+  "repository": "https://github.com/robertdevore/typescript.robertdevore.com",
+  "worker": "typescript-course",
+  "version": "6161f86a-4683-4101-ad0e-af6408bb0611",
+  "ci": {
+    "run": "https://github.com/robertdevore/typescript.robertdevore.com/actions/runs/34062993335",
+    "node": ["24.20.0", "26.x"],
+    "status": "passed"
+  },
+  "httpGate": "passed; see production-verification.json",
+  "localBrowserGate": "passed; see browser-verification.json",
+  "productionBrowserGate": "blocked by inherited Cloudflare Zaraz injection causing CSP console errors",
+  "requiredAction": "Append the hostname-only Configuration Rule in cloudflare-hostname-rule.json, then rerun production browser verification. Both available API credentials returned authentication errors for rule creation; no zone setting was changed."
+}

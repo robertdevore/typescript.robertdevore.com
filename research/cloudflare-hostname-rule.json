@@ -1,0 +1,12 @@
+{
+  "phase": "http_config_settings",
+  "action": "set_config",
+  "action_parameters": {
+    "disable_zaraz": true,
+    "disable_rum": true
+  },
+  "description": "TypeScript course: keep learning pages free of injected analytics",
+  "enabled": true,
+  "expression": "(http.host eq \"typescript.robertdevore.com\")",
+  "ref": "typescript_course_no_analytics"
+}

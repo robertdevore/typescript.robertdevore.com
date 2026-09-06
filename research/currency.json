@@ -1,5 +1,5 @@
 {
-  "verifiedAt": "2026-09-06T21:58:28.563Z",
+  "verifiedAt": "2026-09-06T22:07:42.031Z",
   "runtime": "v24.20.0",
   "tags": {
     "dev": "3.9.4",
@@ -47,7 +47,7 @@
       "concept": "node",
       "url": "https://nodejs.org/en/about/previous-releases",
       "status": 200,
-      "bytes": 296070
+      "bytes": 295971
     },
     {
       "concept": "proposals",

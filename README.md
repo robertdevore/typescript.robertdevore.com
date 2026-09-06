@@ -61,6 +61,8 @@ npm run deploy
 
 Authenticate Wrangler using its supported login or a narrowly scoped deployment token provided through the environment. Never commit credentials. The command runs verification before deployment. Cloudflare provisions the custom-domain route and certificate; it must not replace unrelated zone records.
 
+The parent Cloudflare zone injects Zaraz and Web Analytics by default. A hostname-scoped Configuration Rule must disable Zaraz and Real User Monitoring for `typescript.robertdevore.com`; the intended rule is recorded in `research/cloudflare-hostname-rule.json`. Append it to the existing `http_config_settings` ruleset without replacing unrelated rules. This zone setting is separate from Wrangler deployment and requires Configuration Rules edit permission. See [Cloudflare's settings documentation](https://developers.cloudflare.com/rules/configuration-rules/settings/).
+
 After deploying, run the HTTP production gate and browser gate:
 
 ```sh

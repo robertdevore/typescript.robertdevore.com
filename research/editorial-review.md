@@ -33,3 +33,7 @@ Browser installation from the Playwright CDN timed out locally. The supported BR
 ## Maintenance boundary
 
 The repository has no runtime dependency on the reference courses, no client framework, no live browser compiler, no npm publication side effect, and no committed deployment credentials. Runtime application limits are explicitly documented. Future edition currency checks and normal dependency upkeep are maintenance procedures, not unresolved implementation findings.
+
+## Production release status
+
+Workers Static Assets deployment and the 47-route HTTPS production gate passed. GitHub Actions run 34062993335 passed on Node 24.20.0 and 26.x, including browser checks. The local browser report passes; the production browser gate is currently blocked by inherited zone-level Zaraz analytics and associated CSP errors. `research/deployment.json` records the distinction. The proposed hostname-only Configuration Rule is in `research/cloudflare-hostname-rule.json`; it has not been applied because both API credentials lack rule-edit permission. Do not mark the production browser gate complete until the rule is applied and the unchanged browser tests pass against the canonical site.
