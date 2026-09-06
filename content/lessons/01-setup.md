@@ -1,4 +1,4 @@
-{"number": 1, "slug": "setup", "title": "Modern TypeScript setup", "stage": 1, "description": "Own the complete path from source file to checked code to running JavaScript."}
+{"number": 1, "slug": "setup", "title": "Modern TypeScript setup", "stage": 1, "description": "Set up a project, check your code, and run the JavaScript it produces."}
 
 ## Where you are
 

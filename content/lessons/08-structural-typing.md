@@ -1,4 +1,4 @@
-{"number": 8, "slug": "structural-typing", "title": "Structural typing & assignability", "stage": 2, "description": "Reason about compatible shapes, fresh literals, and the limits of nominal expectations."}
+{"number": 8, "slug": "structural-typing", "title": "Structural typing & assignability", "stage": 2, "description": "Understand why object types are compatible and when excess property checks apply."}
 
 ## Where you are
 

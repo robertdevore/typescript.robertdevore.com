@@ -1,4 +1,4 @@
-{"number": 33, "slug": "runtime-safety", "title": "Type safety versus runtime safety", "stage": 5, "description": "Recognize deliberate unsoundness and protect DOM, JSON, arrays, mutation, and declarations."}
+{"number": 33, "slug": "runtime-safety", "title": "Type safety versus runtime safety", "stage": 5, "description": "Learn where static checks fall short and which runtime checks you still need."}
 
 ## Where you are
 

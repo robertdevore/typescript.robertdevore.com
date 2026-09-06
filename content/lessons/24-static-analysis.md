@@ -1,4 +1,4 @@
-{"number": 24, "slug": "static-analysis", "title": "Linting, formatting & static analysis", "stage": 3, "description": "Give each quality tool a clear job and keep ecosystem compatibility explicit."}
+{"number": 24, "slug": "static-analysis", "title": "Linting, formatting & static analysis", "stage": 3, "description": "Understand what the compiler, linter, formatter, and tests each check."}
 
 ## Where you are
 

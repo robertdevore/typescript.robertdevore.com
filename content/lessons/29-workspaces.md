@@ -1,4 +1,4 @@
-{"number": 29, "slug": "workspaces", "title": "Workspaces & project boundaries", "stage": 4, "description": "Use package graphs and current compiler capabilities to scale without hiding dependencies."}
+{"number": 29, "slug": "workspaces", "title": "Workspaces & project boundaries", "stage": 4, "description": "Organize packages and builds so dependencies stay clear as the repository grows."}
 
 ## Where you are
 

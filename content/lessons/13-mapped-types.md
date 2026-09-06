@@ -1,4 +1,4 @@
-{"number": 13, "slug": "mapped-types", "title": "Mapped types & useful transformations", "stage": 2, "description": "Derive related property contracts while keeping runtime transformations explicit."}
+{"number": 13, "slug": "mapped-types", "title": "Mapped types", "stage": 2, "description": "Transform property types without confusing type changes with runtime changes."}
 
 ## Where you are
 

@@ -1,4 +1,4 @@
-{"number": 23, "slug": "testing", "title": "Runtime tests & type tests", "stage": 3, "description": "Test behavior, inference, rejected inputs, and integration at the boundaries that matter."}
+{"number": 23, "slug": "testing", "title": "Runtime tests & type tests", "stage": 3, "description": "Test runtime behavior, inferred types, rejected inputs, and integrations."}
 
 ## Where you are
 

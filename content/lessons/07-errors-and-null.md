@@ -1,4 +1,4 @@
-{"number": 7, "slug": "errors-and-null", "title": "Errors & nullable values", "stage": 1, "description": "Make absence and failure explicit without turning every operation into a ceremony."}
+{"number": 7, "slug": "errors-and-null", "title": "Errors & nullable values", "stage": 1, "description": "Handle missing values and errors with exceptions and result types."}
 
 ## Where you are
 

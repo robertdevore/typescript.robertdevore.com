@@ -3,13 +3,13 @@ export const origin = "https://typescript.robertdevore.com";
 export const stages = [
   {
     title: "Foundations",
-    description: "Understand JavaScript underneath. Write your first strict TypeScript program.",
+    description: "Learn the JavaScript you need and write your first strict TypeScript program.",
     range: "01–07",
     build: "data-utility",
   },
   {
     title: "The type system",
-    description: "Use inference, narrowing, and relationships to model your domain.",
+    description: "Use inference, narrowing, and generics to describe your data.",
     range: "08–17",
     build: "library-cli",
   },
@@ -21,13 +21,13 @@ export const stages = [
   },
   {
     title: "Libraries & scale",
-    description: "Design public APIs, ship packages, and own a growing codebase.",
+    description: "Design public APIs, publish packages, and manage a growing codebase.",
     range: "26–31",
     build: "package-consumer",
   },
   {
     title: "Advanced & production",
-    description: "Develop the judgment to ship, debug, and maintain serious systems.",
+    description: "Choose types and tools that keep your software easy to change.",
     range: "32–36",
     build: "capstone",
   },

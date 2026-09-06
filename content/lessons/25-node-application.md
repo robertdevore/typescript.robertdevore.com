@@ -1,4 +1,4 @@
-{"number": 25, "slug": "node-application", "title": "Building a Node.js application", "stage": 3, "description": "Own configuration, filesystem, HTTP, logging, and graceful process lifecycle."}
+{"number": 25, "slug": "node-application", "title": "Building a Node.js application", "stage": 3, "description": "Build a Node.js app with configuration, files, HTTP, logs, and graceful shutdown."}
 
 ## Where you are
 

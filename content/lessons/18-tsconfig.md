@@ -1,4 +1,4 @@
-{"number": 18, "slug": "tsconfig", "title": "tsconfig, deliberately", "stage": 3, "description": "Choose compiler settings according to the runtime, emit pipeline, and package boundary."}
+{"number": 18, "slug": "tsconfig", "title": "Configuring TypeScript", "stage": 3, "description": "Choose compiler settings for your runtime, build, and packages."}
 
 ## Where you are
 

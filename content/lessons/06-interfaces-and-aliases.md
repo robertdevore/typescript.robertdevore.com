@@ -1,4 +1,4 @@
-{"number": 6, "slug": "interfaces-and-aliases", "title": "Interfaces & type aliases", "stage": 1, "description": "Choose contracts by extension, composition, and public API needs."}
+{"number": 6, "slug": "interfaces-and-aliases", "title": "Interfaces & type aliases", "stage": 1, "description": "Choose interfaces or type aliases to suit your data and public APIs."}
 
 ## Where you are
 

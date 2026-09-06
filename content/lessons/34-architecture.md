@@ -1,4 +1,4 @@
-{"number": 34, "slug": "architecture", "title": "Architecture for large TypeScript systems", "stage": 5, "description": "Keep domain rules, application services, adapters, and public contracts independently understandable."}
+{"number": 34, "slug": "architecture", "title": "Architecture for large TypeScript systems", "stage": 5, "description": "Separate domain rules, application services, and adapters with clear dependencies."}
 
 ## Where you are
 

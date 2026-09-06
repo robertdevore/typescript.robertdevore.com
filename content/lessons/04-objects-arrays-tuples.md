@@ -1,4 +1,4 @@
-{"number": 4, "slug": "objects-arrays-tuples", "title": "Objects, arrays & tuples", "stage": 1, "description": "Describe data shape while keeping aliasing, optionality, and mutation visible."}
+{"number": 4, "slug": "objects-arrays-tuples", "title": "Objects, arrays & tuples", "stage": 1, "description": "Describe objects and collections, and understand how mutation affects them."}
 
 ## Where you are
 

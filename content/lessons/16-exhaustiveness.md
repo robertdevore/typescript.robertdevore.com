@@ -1,4 +1,4 @@
-{"number": 16, "slug": "exhaustiveness", "title": "Discriminated unions & exhaustiveness", "stage": 2, "description": "Model valid states explicitly and make missing cases visible when the system changes."}
+{"number": 16, "slug": "exhaustiveness", "title": "Discriminated unions & exhaustiveness", "stage": 2, "description": "Describe valid states and catch missing cases when they change."}
 
 ## Where you are
 

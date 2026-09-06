@@ -1,4 +1,4 @@
-{"number": 35, "slug": "compiler-tooling", "title": "Compiler, language service & LSP", "stage": 5, "description": "Understand diagnostics and editor behavior without assuming the old compiler API is permanent."}
+{"number": 35, "slug": "compiler-tooling", "title": "Compiler, language service & LSP", "stage": 5, "description": "Learn how the compiler and language service produce diagnostics and editor feedback."}
 
 ## Where you are
 

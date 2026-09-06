@@ -1,4 +1,4 @@
-{"number": 36, "slug": "shipping", "title": "Shipping & maintaining TypeScript", "stage": 5, "description": "Make releases reproducible and preserve runtime, type, package, and operational contracts."}
+{"number": 36, "slug": "shipping", "title": "Shipping & maintaining TypeScript", "stage": 5, "description": "Build reproducible releases and check that upgrades preserve your public APIs."}
 
 ## Where you are
 

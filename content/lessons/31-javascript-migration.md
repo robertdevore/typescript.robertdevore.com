@@ -1,4 +1,4 @@
-{"number": 31, "slug": "javascript-migration", "title": "Migrating JavaScript safely", "stage": 4, "description": "Add checked boundaries and JSDoc incrementally without making a rewrite the prerequisite."}
+{"number": 31, "slug": "javascript-migration", "title": "Migrating JavaScript safely", "stage": 4, "description": "Adopt TypeScript a step at a time with checked JavaScript, JSDoc, and typed boundaries."}
 
 ## Where you are
 

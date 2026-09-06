@@ -1,4 +1,4 @@
-{"number": 19, "slug": "modules", "title": "ESM, CommonJS & module resolution", "stage": 3, "description": "Trace imports from source through declarations and JavaScript to the actual runtime."}
+{"number": 19, "slug": "modules", "title": "ESM, CommonJS & module resolution", "stage": 3, "description": "Follow an import from TypeScript source to the code your runtime loads."}
 
 ## Where you are
 

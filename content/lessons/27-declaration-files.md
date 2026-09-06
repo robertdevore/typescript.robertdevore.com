@@ -1,4 +1,4 @@
-{"number": 27, "slug": "declaration-files", "title": "Declaration files describe reality", "stage": 4, "description": "Emit, inspect, author, and test declarations without mistaking them for runtime code."}
+{"number": 27, "slug": "declaration-files", "title": "Declaration files", "stage": 4, "description": "Read, write, and test declaration files that describe JavaScript APIs."}
 
 ## Where you are
 

@@ -1,4 +1,4 @@
-{"number": 20, "slug": "runtime-validation", "title": "Runtime validation & trusted boundaries", "stage": 3, "description": "Turn external unknown data into a validated application value with explicit parsing policy."}
+{"number": 20, "slug": "runtime-validation", "title": "Runtime validation & trusted boundaries", "stage": 3, "description": "Parse external data before using it as a trusted application value."}
 
 ## Where you are
 

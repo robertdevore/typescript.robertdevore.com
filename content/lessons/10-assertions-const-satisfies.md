@@ -1,4 +1,4 @@
-{"number": 10, "slug": "assertions-const-satisfies", "title": "Assertions, as const & satisfies", "stage": 2, "description": "Keep useful inference while checking contracts, and recognize assertions as claims."}
+{"number": 10, "slug": "assertions-const-satisfies", "title": "Assertions, as const & satisfies", "stage": 2, "description": "Compare annotations, assertions, const assertions, and satisfies."}
 
 ## Where you are
 

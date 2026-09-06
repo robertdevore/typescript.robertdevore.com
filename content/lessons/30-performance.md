@@ -1,12 +1,12 @@
-{"number": 30, "slug": "performance", "title": "Compiler & editor performance", "stage": 4, "description": "Measure checking, declaration, and project costs before changing type design."}
+{"number": 30, "slug": "performance", "title": "Compiler & editor performance", "stage": 4, "description": "Find what slows the compiler or editor before changing your types."}
 
 ## Where you are
 
-Your package graph has explicit boundaries. Performance work now needs evidence: which command is slow, under which inputs, on which machine, and in which compiler generation? Native code improves the baseline but does not make arbitrary type complexity free.
+Your package graph has explicit boundaries. Before changing types for speed, identify the slow command, its inputs, the machine, and the compiler version. Native code improves the baseline but does not make arbitrary type complexity free.
 
 ## Mental model
 
-Separate program loading, parsing, checking, declaration emit, and editor requests. A runtime benchmark measures a different system. A faster JavaScript algorithm does not necessarily make a conditional type cheaper, and a simpler type may change no emitted JavaScript at all.
+Separate program loading, parsing, checking, declaration emit, and editor requests. Runtime benchmarks measure the running JavaScript. A faster JavaScript algorithm does not necessarily make a conditional type cheaper, and a simpler type may change no emitted JavaScript at all.
 
 ## Runtime and tooling reality
 
@@ -14,9 +14,9 @@ Editor responsiveness includes file watching, filesystem cost, extension activit
 
 ## TypeScript model
 
-Large unions, repeated intersections, recursive conditionals, and enormous generated declarations can increase work. Named intermediate types can improve readability and avoid repeated expansion, but do not claim a universal speedup without measurement. Prefer interfaces for ordinary extension when they communicate the model more clearly; do not rewrite a repository by folklore.
+Large unions, repeated intersections, recursive conditionals, and enormous generated declarations can increase work. Named intermediate types can improve readability and avoid repeated expansion, but do not claim a universal speedup without measurement. Prefer interfaces for ordinary extension when they communicate the model more clearly; measure before rewriting a repository.
 
-TypeScript 7's native architecture supports parallel checking and parallel project builds. More checkers can increase memory. Fix a configuration for comparisons and record cold versus warm cache state. Legacy compiler tracing recipes may not exist unchanged in the native compiler; inspect current help and documentation before recommending a flag.
+TypeScript 7's native architecture supports parallel checking and parallel project builds. More checkers can increase memory. Keep the configuration fixed when comparing results, and record whether the cache is cold or warm. Legacy compiler tracing recipes may not exist unchanged in the native compiler; inspect current help and documentation before recommending a flag.
 
 ## Working example
 
@@ -36,7 +36,7 @@ npx tsc --help --all
 npx tsc --noEmit --extendedDiagnostics
 ```
 
-Use the diagnostic timing categories to decide where to investigate. For project references, compare clean and incremental `tsc -b` separately. Repeat enough times to notice variance; report a median and machine context rather than one favorable run. Do not use the release blog's benchmark multiplier as your own measurement.
+Use the diagnostic timing categories to decide where to investigate. For project references, compare clean and incremental `tsc -b` separately. Repeat enough times to notice variance; report the median and the machine used. Do not use the release blog's benchmark multiplier as your own measurement.
 
 ## Type-checker drill
 

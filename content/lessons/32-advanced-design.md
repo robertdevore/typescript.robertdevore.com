@@ -1,4 +1,4 @@
-{"number": 32, "slug": "advanced-design", "title": "Advanced types without gymnastics", "stage": 5, "description": "Use brands, builders, recursion, and type-state only when they improve a real contract."}
+{"number": 32, "slug": "advanced-design", "title": "Practical advanced types", "stage": 5, "description": "Use brands, builders, recursion, and type-state when they make an API easier to use."}
 
 ## Where you are
 

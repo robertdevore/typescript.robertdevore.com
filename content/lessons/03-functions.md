@@ -1,4 +1,4 @@
-{"number": 3, "slug": "functions", "title": "Functions & useful contracts", "stage": 1, "description": "Model callers, callbacks, closures, and return values without annotation noise."}
+{"number": 3, "slug": "functions", "title": "Functions & callbacks", "stage": 1, "description": "Write functions and callbacks with clear inputs and return types."}
 
 ## Where you are
 

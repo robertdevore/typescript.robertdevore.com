@@ -1,4 +1,4 @@
-{"number": 22, "slug": "http-clients", "title": "HTTP clients & external APIs", "stage": 3, "description": "Handle transport, status, validation, cancellation, and retry policy as distinct concerns."}
+{"number": 22, "slug": "http-clients", "title": "HTTP clients & external APIs", "stage": 3, "description": "Build an HTTP client that checks responses and handles failures, retries, and cancellation."}
 
 ## Where you are
 

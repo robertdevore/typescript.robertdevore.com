@@ -1,4 +1,4 @@
-{"number": 11, "slug": "generics", "title": "Generics that preserve relationships", "stage": 2, "description": "Design reusable functions whose outputs retain useful information about their inputs."}
+{"number": 11, "slug": "generics", "title": "Generics & type relationships", "stage": 2, "description": "Design reusable functions whose outputs retain useful information about their inputs."}
 
 ## Where you are
 

@@ -1,4 +1,4 @@
-{"number": 14, "slug": "conditional-types", "title": "Conditional types & infer", "stage": 2, "description": "Express useful type relationships and understand distribution before adding complexity."}
+{"number": 14, "slug": "conditional-types", "title": "Conditional types & infer", "stage": 2, "description": "Use conditional types and infer, and learn when unions distribute."}
 
 ## Where you are
 

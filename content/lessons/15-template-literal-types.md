@@ -1,4 +1,4 @@
-{"number": 15, "slug": "template-literal-types", "title": "Template literal types", "stage": 2, "description": "Build understandable event and route names without turning strings into a type puzzle."}
+{"number": 15, "slug": "template-literal-types", "title": "Template literal types", "stage": 2, "description": "Define event names and route patterns with string literal types."}
 
 ## Where you are
 

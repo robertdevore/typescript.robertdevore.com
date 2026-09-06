@@ -1,4 +1,4 @@
-{"number": 26, "slug": "library-design", "title": "Library design for the caller", "stage": 4, "description": "Design public contracts around useful inference, readable diagnostics, and stable behavior."}
+{"number": 26, "slug": "library-design", "title": "Designing library APIs", "stage": 4, "description": "Build APIs with useful inference, clear diagnostics, and stable behavior."}
 
 ## Where you are
 
