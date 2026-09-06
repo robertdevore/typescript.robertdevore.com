@@ -1045,10 +1045,6 @@ footer small {
   flex-shrink: 0;
   vertical-align: middle;
 }
-.logo .icon {
-  width: 30px;
-  height: 30px;
-}
 .eyebrow > .icon {
   width: 9px;
   height: 9px;
