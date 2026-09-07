@@ -59,12 +59,19 @@ function nav(active) {
 }
 function layout(title, description, path, body, active = "", noindex = false) {
   const lesson = sequence.find((item) => item.url === path);
-  const socialImage = lesson
-    ? `${origin}/assets/og/${lesson.slug}.png`
-    : `${origin}/assets/social.png`;
-  const socialAlt = lesson
-    ? `${lesson.title} — TypeScript Course`
-    : "TypeScript Course: Learn TypeScript. Build apps and libraries.";
+  const isHomepage = path === "/";
+  const socialImage = isHomepage
+    ? `${origin}/assets/typescript-course-launch.png`
+    : lesson
+      ? `${origin}/assets/og/${lesson.slug}.png`
+      : `${origin}/assets/social.png`;
+  const socialWidth = isHomepage ? 1536 : 1200;
+  const socialHeight = isHomepage ? 1024 : 630;
+  const socialAlt = isHomepage
+    ? "Learn TypeScript. Build real things. Free course with 36 lessons and a production capstone."
+    : lesson
+      ? `${lesson.title} — TypeScript Course`
+      : "TypeScript Course: Learn TypeScript. Build apps and libraries.";
   const crumbs = [
     { name: "Home", url: "/" },
     ...(lesson ? [{ name: "Course", url: "/course/" }] : []),
@@ -107,8 +114,8 @@ function layout(title, description, path, body, active = "", noindex = false) {
       primaryImageOfPage: {
         "@type": "ImageObject",
         url: socialImage,
-        width: 1200,
-        height: 630,
+        width: socialWidth,
+        height: socialHeight,
         caption: socialAlt,
       },
     },
@@ -130,7 +137,7 @@ function layout(title, description, path, body, active = "", noindex = false) {
     ? ""
     : `<script type="application/ld+json">${JSON.stringify({ "@context": "https://schema.org", "@graph": graph }).replaceAll("<", "\\u003c")}</script>`;
 
-  return `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>${e(title)} · TypeScript Course</title><meta name="description" content="${e(description)}"><link rel="canonical" href="${origin}${path}"><meta property="og:type" content="website"><meta property="og:title" content="${e(title)} · TypeScript Course"><meta property="og:description" content="${e(description)}"><meta property="og:url" content="${origin}${path}"><meta property="og:image" content="${socialImage}"><meta property="og:image:type" content="image/png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="${e(socialAlt)}"><meta property="og:site_name" content="TypeScript Course"><meta property="og:locale" content="en_US"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="${e(title)}"><meta name="twitter:description" content="${e(description)}"><meta name="twitter:image" content="${socialImage}"><meta name="twitter:image:alt" content="${e(socialAlt)}">${schema}${noindex ? '<meta name="robots" content="noindex,follow">' : ""}<meta name="theme-color" content="#f7f8f6"><link rel="icon" href="/assets/favicon.svg" type="image/svg+xml"><link rel="preload" href="/assets/fonts/DepartureMono-Regular.woff2" as="font" type="font/woff2" crossorigin><link rel="stylesheet" href="/assets/site.css"><script src="/assets/site.js" defer></script></head><body data-course-ids="${e(JSON.stringify(ids))}">${nav(active)}${body}<footer><a class="brand" href="/">TypeScript / The course</a><p>Understand JavaScript. Use TypeScript. Check what runs.</p><div><a href="/course/">Learning path</a><a href="/research/">Sources & versions</a><a href="/sitemap.xml">Sitemap</a><a href="https://robertdevore.com">Robert DeVore</a><a href="https://github.com/robertdevore/typescript.robertdevore.com">Source code</a></div><small>Independent educational course. No affiliation with or endorsement by Microsoft or the named reference contributors.</small></footer></body></html>`;
+  return `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>${e(title)} · TypeScript Course</title><meta name="description" content="${e(description)}"><link rel="canonical" href="${origin}${path}"><meta property="og:type" content="website"><meta property="og:title" content="${e(title)} · TypeScript Course"><meta property="og:description" content="${e(description)}"><meta property="og:url" content="${origin}${path}"><meta property="og:image" content="${socialImage}"><meta property="og:image:type" content="image/png"><meta property="og:image:width" content="${socialWidth}"><meta property="og:image:height" content="${socialHeight}"><meta property="og:image:alt" content="${e(socialAlt)}"><meta property="og:site_name" content="TypeScript Course"><meta property="og:locale" content="en_US"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="${e(title)}"><meta name="twitter:description" content="${e(description)}"><meta name="twitter:image" content="${socialImage}"><meta name="twitter:image:alt" content="${e(socialAlt)}">${schema}${noindex ? '<meta name="robots" content="noindex,follow">' : ""}<meta name="theme-color" content="#f7f8f6"><link rel="icon" href="/assets/favicon.svg" type="image/svg+xml"><link rel="preload" href="/assets/fonts/DepartureMono-Regular.woff2" as="font" type="font/woff2" crossorigin><link rel="stylesheet" href="/assets/site.css"><script src="/assets/site.js" defer></script></head><body data-course-ids="${e(JSON.stringify(ids))}">${nav(active)}${body}<footer><a class="brand" href="/">TypeScript / The course</a><p>Understand JavaScript. Use TypeScript. Check what runs.</p><div><a href="/course/">Learning path</a><a href="/research/">Sources & versions</a><a href="/sitemap.xml">Sitemap</a><a href="https://robertdevore.com">Robert DeVore</a><a href="https://github.com/robertdevore/typescript.robertdevore.com">Source code</a></div><small>Independent educational course. No affiliation with or endorsement by Microsoft or the named reference contributors.</small></footer></body></html>`;
 }
 async function page(path, title, description, body, active, noindex) {
   const directory = `dist${path}`;
@@ -165,6 +172,7 @@ function curriculum() {
 await rm("dist", { recursive: true, force: true });
 await mkdir("dist/assets", { recursive: true });
 await cp("assets", "dist/assets", { recursive: true });
+await cp("media/typescript-course-launch.png", "dist/assets/typescript-course-launch.png");
 const symbols = await Promise.all(
   (await readdir("assets/tabler"))
     .filter((name) => name.endsWith(".svg"))

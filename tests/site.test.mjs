@@ -84,7 +84,7 @@ test("production canonical and discovery metadata are consistent", async () => {
     assert.ok(!html.includes("{{diagnostic}}"));
     assert.match(
       head,
-      /og:image.*typescript\.robertdevore\.com\/assets\/(?:social|og\/[a-z-]+)\.png/,
+      /og:image.*typescript\.robertdevore\.com\/assets\/(?:social|typescript-course-launch|og\/[a-z-]+)\.png/,
     );
   }
   const sitemap = await readFile("dist/sitemap.xml", "utf8");
