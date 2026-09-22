@@ -120,6 +120,16 @@ test("site JavaScript stays small and fonts are locally owned", async () => {
     );
   }
 });
+test("Kujo SSG WebMCP artifacts expose public course content", async () => {
+  const index = JSON.parse(await readFile("dist/.well-known/kujo-site-index.json", "utf8"));
+  assert.equal(index.schema, "kujo-ssg-site-index/v1");
+  assert.equal(index.site.url, origin);
+  assert.ok(index.items.some((item) => item.type === "lessons"));
+  assert.ok(index.items.some((item) => item.url === "/builds/capstone/"));
+  assert.ok((await stat("dist/assets/js/kujo-webmcp.js")).size < 12288);
+  assert.match(await readFile("dist/index.html", "utf8"), /data-kujo-webmcp/);
+  assert.doesNotMatch(await readFile("dist/404.html", "utf8"), /data-kujo-webmcp/);
+});
 
 test("social images and structured data match their pages", async () => {
   const manifest = JSON.parse(await readFile("howl.json", "utf8"));

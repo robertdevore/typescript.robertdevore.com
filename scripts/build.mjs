@@ -4,6 +4,7 @@ import hljs from "highlight.js";
 import { build } from "esbuild";
 import { readCollection, stages, origin, escape as e } from "./content.mjs";
 import { icon } from "../assets/icons.js";
+import { emitWebMcp } from "./webmcp.mjs";
 const lessons = await readCollection("lessons");
 const builds = await readCollection("builds");
 const sequence = stages.flatMap((_, i) => [
@@ -373,6 +374,12 @@ await cp("examples/valid", "dist/examples/source", { recursive: true });
 await mkdir("dist/labs/browser", { recursive: true });
 await cp("labs/browser/index.html", "dist/labs/browser/index.html");
 await cp(".work/browser/main.js", "dist/labs/browser/main.js");
+await emitWebMcp({
+  output: "dist",
+  siteTitle: "TypeScript Course",
+  tagline: "Understand JavaScript. Use TypeScript. Check what runs.",
+  siteUrl: origin,
+});
 console.log(
   `Built ${routes.length} indexed pages, ${sequence.length} progress checkpoints, search, sitemap, and browser lab.`,
 );

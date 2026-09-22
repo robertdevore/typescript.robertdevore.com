@@ -6,6 +6,8 @@ package-lock.json
 research/verification.json
 examples/expected
 assets/fonts
+# Vendored byte-for-byte from Kujo SSG 1.0.0.
+assets/js/kujo-webmcp.js
 labs/*/dist
 # Intentional narrow layout of the homepage teaching example.
 labs/hero.ts

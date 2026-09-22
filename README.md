@@ -37,7 +37,7 @@ npm run test:browser
 
 ## Architecture
 
-The SSG is a small Node build using markdown-it and build-time highlight.js. It emits plain HTML with explicit directory-index routes, a sitemap, robots.txt, llms.txt, a lazy-loaded search index, and a tiny progressive-enhancement script. No client framework or runtime dependency on another course site is shipped.
+The SSG is a small Node build using markdown-it and build-time highlight.js. It emits plain HTML with explicit directory-index routes, a sitemap, robots.txt, llms.txt, a lazy-loaded search index, and the read-only Kujo SSG WebMCP v1 public index and browser adapter. No client framework or runtime dependency on another course site is shipped.
 
 Content lives in `content/lessons` and `content/builds`. The first line is a JSON metadata object; remaining content is Markdown. Keep first-line metadata on one line. Lesson placeholders load actual compiler-verified examples and diagnostic output. `scripts/content.mjs` owns ordering and stage metadata; `scripts/build.mjs` owns routes and rendering.
 
