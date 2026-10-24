@@ -383,3 +383,7 @@ await emitWebMcp({
 console.log(
   `Built ${routes.length} indexed pages, ${sequence.length} progress checkpoints, search, sitemap, and browser lab.`,
 );
+
+// Install and validate the reviewed security checkpoint after generation.
+const { execFileSync: runCheckpoint } = await import("node:child_process");
+runCheckpoint("python3", ["scripts/security-checkpoint.py"], { stdio: "inherit" });

@@ -11,3 +11,4 @@ playwright-report/
 labs/*/dist/
 # Python audit-tool bytecode.
 __pycache__/
+.security-checkpoint/

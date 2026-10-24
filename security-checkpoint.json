@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "sites": [
+    {
+      "domain": "typescript.robertdevore.com",
+      "contact": "me@robertdevore.com",
+      "adapter": "cloudflare-workers",
+      "output_dir": "dist",
+      "expires": "2027-04-22T00:00:00Z"
+    }
+  ]
+}
